@@ -71,7 +71,7 @@ end
 
 #Scenario: Student Page one tests
 Given /^I am on the grader home page$/ do
-  visit "/GraderHome/"
+  visit "/StudentHome/"
 end
 
  When /^I click "([^']*)" $/ do |element|
@@ -89,7 +89,7 @@ end
 
 #Scenario: Student Page Two tests
 Given /^I am on the grader home page$/ do
-  visit "/GraderHome/"
+  visit "/StudentGrades/"
 end
 
  When /^I click "([^']*)" $/ do |element|
@@ -103,8 +103,6 @@ end
 Then /^I should see "([^']*)" in a link$/ do |text|
   page.should have_link text
 end
-
-
 
 
 
