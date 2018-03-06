@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   root 'users#index'
+  get 'grader_dashboard', to: 'users#grader_dashboard'
+  get 'grader_student_solution', to: 'users#grader_student_solution'
+  get 'student_input_and_solution', to: 'users#student_input_and_solution'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
