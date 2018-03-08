@@ -6,10 +6,12 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+  <body>
+    <% if not current_page?(controller: 'pages', action: 'index') %>
+      <%= render 'layouts/navbar' %>
+    <% end %>
   
-
-<%= yield %>
-
-</body>
+    <%= yield %>
+  
+  </body>
 </html>

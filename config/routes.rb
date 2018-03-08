@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  root 'users#index'
-  get 'grader_dashboard', to: 'users#grader_dashboard'
-  get 'grader_student_solution', to: 'users#grader_student_solution'
-  get 'student_input_and_solution', to: 'users#student_input_and_solution'
+  root 'pages#index'
+  get 'grader_dashboard', to: 'pages#grader_dashboard'
+  get 'grader_student_solution', to: 'pages#grader_student_solution'
+  get 'student_input_and_solution', to: 'pages#student_input_and_solution'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
