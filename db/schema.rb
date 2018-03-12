@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20180309204913) do
     t.string   "first_name",             default: "", null: false
     t.string   "last_name",              default: "", null: false
     t.string   "uid",                    default: "", null: false
-    t.string   "tamu_uni",               default: "", null: false
+    t.string   "tamu_uin",               default: "", null: false
     t.string   "class_section",          default: "", null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"

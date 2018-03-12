@@ -12,7 +12,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :first_name, null: false, default: ""
       t.string :last_name, null: false, default: ""
       t.string :uid, null: false, default: ""
-      t.string :tamu_uni, null: false, default: ""
+      t.string :tamu_uin, null: false, default: ""
       t.string :class_section, null: false, default: ""
       
 

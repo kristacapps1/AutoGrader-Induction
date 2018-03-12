@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   skip_before_filter :require_login, :only=>[:index]
   
-  before_filter :require_uni_class, :except=>[:index]
+  before_filter :require_uin_class, :except=>[:index]
   
   def index
     if(current_user)

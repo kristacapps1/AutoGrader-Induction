@@ -18,7 +18,7 @@ class UsersController < ApplicationController
     
     def user_params
         # NOTE: Using `strong_parameters` gem
-        params.require(:user).permit(:tamu_uni, :class_section)
+        params.require(:user).permit(:tamu_uin, :class_section)
     end
 end
   

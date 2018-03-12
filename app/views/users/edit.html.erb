@@ -1,8 +1,8 @@
 <html>
     <%= form_for(@user, :url => { :action => "update_user" } ) do |f| %>
       <div class="field">
-        <%= f.label :tamu_uni, "UNI" %><br />
-        <%= f.text_field :tamu_uni, :autocomplete => "tamu_uni", presence: true, :required => true   %>
+        <%= f.label :tamu_uin, "UIN" %><br />
+        <%= f.text_field :tamu_uin, :autocomplete => "tamu_uin", presence: true, :required => true   %>
       </div>
 
       <div class="field">
