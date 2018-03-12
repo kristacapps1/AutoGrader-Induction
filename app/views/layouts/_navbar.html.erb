@@ -1,9 +1,32 @@
+
+
 <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
-  <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Welcome, Name</a>
+  
+
+  <a>
+    
+      <%= link_to "Welcome, " + current_user.first_name, root_path, class: "navbar-brand col-sm-3 col-md-2 mr-0" %>
+    
+  </a>
+
+  <a>
+    <%= link_to "Grader", grader_dashboard_path, class: "navbar-brand col-sm-3 col-md-1 mr-0" %>
+  </a>
+  <a>
+    <%= link_to "Grader's Students", grader_student_solution_path, class: "navbar-brand col-sm-3 col-md-1 mr-0" %>
+  </a>
+  <a>
+    <%= link_to "Student", student_input_and_solution_path, class: "navbar-brand col-sm-1 col-md-1 mr-0" %>
+  </a>
+   <a>
+    <%= link_to "Update", edit_user_path, class: "navbar-brand col-sm-1 col-md-1 mr-0" %>
+  </a>
   <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
   <ul class="navbar-nav px-3">
     <li class="nav-item text-nowrap">
-      <a class="nav-link" href="#">Sign out</a>
+      <a>
+        <%= link_to "Sign Out", destroy_user_session_path, :method => "delete", class: "nav-link" %>
+      </a>
     </li>
   </ul>
 </nav>

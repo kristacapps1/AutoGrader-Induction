@@ -1,9 +1,17 @@
 Rails.application.routes.draw do
+  devise_for :users, controllers: { 
+    omniauth_callbacks: 'omniauth_callbacks', sessions: "sessions" }
+    
   root 'pages#index'
   get 'grader_dashboard', to: 'pages#grader_dashboard'
   get 'grader_student_solution', to: 'pages#grader_student_solution'
   get 'student_input_and_solution', to: 'pages#student_input_and_solution'
 
+  resource :user, only: [:edit] do
+    collection do
+      patch 'update_user'
+    end
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

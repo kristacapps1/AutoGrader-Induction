@@ -1,0 +1,19 @@
+<html>
+    <%= form_for(@user, :url => { :action => "update_user" } ) do |f| %>
+      <div class="field">
+        <%= f.label :tamu_uni, "UNI" %><br />
+        <%= f.text_field :tamu_uni, :autocomplete => "tamu_uni", presence: true, :required => true   %>
+      </div>
+
+      <div class="field">
+        <%= f.label :class_section, "Class Section" %><br />
+        <%= f.select :class_section, ["501", "502", "503"],:prompt => 'Select One' , :autocomplete => "class_section", :required => true  %>
+
+      </div>
+      <div class="action_container">
+        <%= f.submit %>
+      </div>
+    <% end %>
+</html>
+
+

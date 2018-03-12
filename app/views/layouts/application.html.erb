@@ -7,10 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
   <body>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <%= stylesheet_link_tag "grader_dashboard", media: 'all'%>
+    
+    
     <% if not current_page?(controller: 'pages', action: 'index') %>
       <%= render 'layouts/navbar' %>
     <% end %>
-  
+        
+        
+    <%= render 'layouts/messages'%>
     <%= yield %>
   
   </body>

@@ -13,14 +13,16 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <%= stylesheet_link_tag "signin", media: 'all'%>
+    <%= stylesheet_link_tag "grader_dashboard", media: 'all'%>
   </head>
  
-  <body class="text-center">
+  <body >
     
-    <form class="form-signin">
+    <form class="form-signin text-center">
       
       <%= image_tag('tamu_logo.jpg', :size => "200x200", :class => "mb-4") %> 
       
+      <!--
       <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
       <label for="inputEmail" class="sr-only">Email address</label>
       <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
@@ -31,8 +33,9 @@
           <input type="checkbox" value="remember-me"> Remember me
         </label>
       </div>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign In</button>
-     
+      -->
+        <%= link_to  "Sign In", user_google_oauth2_omniauth_authorize_path, method: :get, class: "btn btn-lg btn-primary btn-block"  %>
     </form>
+    
   </body>
 </html>
