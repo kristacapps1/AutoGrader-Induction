@@ -13,3 +13,19 @@ end
 Then /^I should see "([^"]*)" in a link$/ do |text|
   page.should have_link text
 end
+
+Given /^I am on "([^"]*)"$/ do |path|
+  visit path
+end
+
+When /^I fill in "([^"]*)" with "([^"]*)"$/ do |element, text|
+  fill_in element, with: text
+end
+ 
+When /^I click "([^"]*)"$/ do |element|
+  click_on element
+end
+
+#When /^I select "" with "" $/ do |list, selection| 
+  #ruby code
+#end
