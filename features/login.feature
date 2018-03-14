@@ -5,4 +5,4 @@ Feature: Login Page
   
   Scenario: Login Button
     When I click login button
-    Then I go to home page
+    Then I go to Google API page
