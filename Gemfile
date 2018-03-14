@@ -27,6 +27,9 @@ gem 'bootstrap', '~> 4.0.0'
 gem 'omniauth-google-oauth2'
 gem 'devise'
 
+gem 'sinatra'
+#Added for testing using testing-steps
+
 group :test, :development do
   gem 'cucumber-rails', :require => false
   # database_cleaner is not required, but highly recommended
