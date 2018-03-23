@@ -5,21 +5,21 @@ Feature: Create class and Assignment
   
   Scenario: Find New Class
     Given I am on the grader dashboard page
-    Then I should see "Create a New Class"
+    Then I should see "Create a New Class" in a link
     
   Scenario: Create Class
     When I click "Create a New Class"
-    And I enter "CSCE 222"
+    And I fill in "Title" with "CSCE 222"
     And I click "Create"
     Then I should see "Class successfully created"
     
   Scenario: Find New Assignment
     Given I am on the grader dashboard page
-    Then I should see "Create a New Assignment"
+    Then I should see "Create a New Assignment" in a link
     
   Scenario: Create Assignment
     Given I am on the grader dashboard page
     When I click "Create a New Assignment"
-    And I enter "Homework 1"
+    And I fill in "Title" with "Homework 1"
     And I click "Create"
     Then I should see "Assigment created"

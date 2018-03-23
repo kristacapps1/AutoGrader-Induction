@@ -13,7 +13,7 @@ Scenario: Find the link to the update
   
 Scenario: Fill out form
     Given I am on "/user/edit"
-    When I fill in "UIN" with "123456789"
+    When I fill in "text_field" with "123456789"
     And I select from "section" with "501"
     And I click "Update User"
     Then I should see "Information successfully updated." #Again this is only a suggestion, however some form of input verification would probably be good.

@@ -32,6 +32,7 @@ gem 'sinatra'
 
 group :test, :development do
   gem 'cucumber-rails', :require => false
+  gem 'webrat', :require => false
   # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
 end
