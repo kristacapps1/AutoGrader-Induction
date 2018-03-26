@@ -39,25 +39,27 @@
                  <li class="nav-item">
                  <a class="nav-link active" href="#">
                  
-                  Create a New Assignments <span class="sr-only">(current)</span>
+               <%= link_to "Create an Assignment", new_assignment_path, class: "nav-link active" %> 
                 </a>
               </li>
             </ul>
 
             <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-              <span>Classes</span>
+              <span>Sections</span>
               <a class="d-flex align-items-center text-muted" href="#">
                 <span data-feather="plus-circle"></span>
               </a>
             </h6>
             <ul class="nav flex-column mb-2">
+               <% @sections.each do |section| %>
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   <span data-feather="file-text"></span>
-                  CSCE 222
+                  
+                  <%= section %>
                 </a>
               </li>
-             
+             <% end %>
             </ul>
           </div>
         </nav>
@@ -82,14 +84,18 @@
                 </tr>
               </thead>
               <tbody>
+                <% if @users %>
+                <% @users.each do |user| %>
                 <tr>
-                  <td>John</td>
-                  <td>Doe</td>
-                  <td>JohnDoe@tamu.edu</td>
-                  <td>123456789</td>
-                  <td>503</td>
+                  
+                  <td><%= link_to user.first_name , grader_student_solution_path %> </td>
+                  <td><%= user.last_name %></td>
+                  <td><%= user.email %></td>
+                  <td><%= user.tamu_uin %></td>
+                  <td><%= user.class_section %></td>
                 </tr>
-               
+                <% end %>
+                <% end %>
               </tbody>
             </table>
           </div>

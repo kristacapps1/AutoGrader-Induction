@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :assignments
+
   devise_for :users, controllers: { 
     omniauth_callbacks: 'omniauth_callbacks', sessions: "sessions" }
     
@@ -6,13 +8,17 @@ Rails.application.routes.draw do
   get 'grader_dashboard', to: 'pages#grader_dashboard'
   get 'grader_student_solution', to: 'pages#grader_student_solution'
   get 'student_input_and_solution', to: 'pages#student_input_and_solution'
+  
 
   resource :user, only: [:edit] do
     collection do
       patch 'update_user'
     end
   end
-
+  
+ 
+  
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -27,7 +33,7 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-
+   
   # Example resource route with options:
   #   resources :products do
   #     member do

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  problem: MyText
+  due_date: 
+  possible_grade: 
+
+two:
+  title: MyString
+  problem: MyText
+  due_date: 
+  possible_grade: 

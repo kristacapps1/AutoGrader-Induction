@@ -38,18 +38,14 @@
               </a>
             </h6>
             <ul class="nav flex-column mb-2">
+               <% @assignment.each do |assignment| %>
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   <span data-feather="file-text"></span>
-                  Assignment A
+                  <%= assignment.title %>
                 </a>
               </li>
-                 <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <span data-feather="file-text"></span>
-                  Assignment B
-                </a>
-              </li>
+                <% end %>
              
             </ul>
           </div>

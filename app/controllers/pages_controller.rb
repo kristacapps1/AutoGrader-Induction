@@ -11,11 +11,20 @@ class PagesController < ApplicationController
   end
   
   def grader_dashboard
+    @sections = Assignment.sections
+    @users = User.all
   end
   
   def grader_student_solution
+    @assignment = Assignment.all
   end
   
   def student_input_and_solution
+     @assignment = Assignment.all
   end
+  
+  def new_assignment
+     User.add_section
+  end
+
 end

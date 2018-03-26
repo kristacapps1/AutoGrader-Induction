@@ -1,9 +1,11 @@
 class UsersController < ApplicationController
     before_action :authenticate_user!
     
+    
     def edit
         @user = current_user
     end
+    
     
     def update_user
         @user = current_user
@@ -14,11 +16,17 @@ class UsersController < ApplicationController
         end
     end
     
+    
+    
     private
     
     def user_params
         # NOTE: Using `strong_parameters` gem
         params.require(:user).permit(:tamu_uin, :class_section)
+        
     end
+    
+   
+    
 end
   
