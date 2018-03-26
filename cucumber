@@ -1,0 +1,757 @@
+Script started on Wed Mar 21 14:55:14 2018
+[?1034hbash-3.2$ 
+bash-3.2$ 
+bash-3.2$ ls
+Gemfile			bin			features		public
+Gemfile.lock		config			lib			script
+README.md		config.ru		log			test
+Rakefile		cucumber		loginimg.jpg		vendor
+app			db			past_commited_files
+bash-3.2$ ls features/
+create.feature    login.feature     step_definitions/ support/          update.feature    
+bash-3.2$ ls features/step_definitions/
+sinatra_steps.rb
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ q
+bash: q: command not found
+bash-3.2$ script[K[K[K[K[K[K/[Kscript/cucumber 
+Deprecated: Found tags option '~@wip'. Support for '~@tag' will be removed from the next release of Cucumber. Please use 'not @tag' instead.
+WARN: Unresolved specs during Gem::Specification.reset:
+      builder (>= 2.1.2, ~> 3.1)
+      minitest (~> 5.1)
+      loofah (~> 2.0)
+      rake (>= 0.8.7)
+      thor (< 2.0, >= 0.18.1)
+WARN: Clearing out unresolved specs.
+Please report a bug if this causes problems.
+You have already activated activesupport 4.2.6, but your Gemfile requires activesupport 4.2.5. Prepending `bundle exec` to your command may solve this. (Gem::LoadError)
+/Users/Krista/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.1/lib/bundler/runtime.rb:313:in `check_for_activated_spec!'
+/Users/Krista/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.1/lib/bundler/runtime.rb:31:in `block in setup'
+/Users/Krista/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.1/lib/bundler/runtime.rb:26:in `map'
+/Users/Krista/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.1/lib/bundler/runtime.rb:26:in `setup'
+/Users/Krista/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.1/lib/bundler.rb:107:in `setup'
+/Users/Krista/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.1/lib/bundler/setup.rb:10:in `<top (required)>'
+/Users/Krista/.rvm/rubies/ruby-2.3.0/lib/ruby/site_ruby/2.3.0/rubygems/core_ext/kernel_require.rb:70:in `require'
+/Users/Krista/.rvm/rubies/ruby-2.3.0/lib/ruby/site_ruby/2.3.0/rubygems/core_ext/kernel_require.rb:70:in `require'
+/Users/Krista/repos/AutoGrader-Induction/config/boot.rb:3:in `<top (required)>'
+/Users/Krista/.rvm/rubies/ruby-2.3.0/lib/ruby/site_ruby/2.3.0/rubygems/core_ext/kernel_require.rb:122:in `require'
+/Users/Krista/.rvm/rubies/ruby-2.3.0/lib/ruby/site_ruby/2.3.0/rubygems/core_ext/kernel_require.rb:122:in `require'
+/Users/Krista/repos/AutoGrader-Induction/config/application.rb:1:in `<top (required)>'
+/Users/Krista/.rvm/rubies/ruby-2.3.0/lib/ruby/site_ruby/2.3.0/rubygems/core_ext/kernel_require.rb:122:in `require'
+/Users/Krista/.rvm/rubies/ruby-2.3.0/lib/ruby/site_ruby/2.3.0/rubygems/core_ext/kernel_require.rb:122:in `require'
+/Users/Krista/repos/AutoGrader-Induction/config/environment.rb:2:in `<top (required)>'
+/Users/Krista/.rvm/rubies/ruby-2.3.0/lib/ruby/site_ruby/2.3.0/rubygems/core_ext/kernel_require.rb:122:in `require'
+/Users/Krista/.rvm/rubies/ruby-2.3.0/lib/ruby/site_ruby/2.3.0/rubygems/core_ext/kernel_require.rb:122:in `require'
+/Users/Krista/.rvm/gems/ruby-2.3.0/gems/cucumber-rails-1.5.0/lib/cucumber/rails.rb:7:in `<top (required)>'
+/Users/Krista/.rvm/rubies/ruby-2.3.0/lib/ruby/site_ruby/2.3.0/rubygems/core_ext/kernel_require.rb:135:in `require'
+/Users/Krista/.rvm/rubies/ruby-2.3.0/lib/ruby/site_ruby/2.3.0/rubygems/core_ext/kernel_require.rb:135:in `rescue in require'
+/Users/Krista/.rvm/rubies/ruby-2.3.0/lib/ruby/site_ruby/2.3.0/rubygems/core_ext/kernel_require.rb:40:in `require'
+/Users/Krista/repos/AutoGrader-Induction/features/support/env.rb:7:in `<top (required)>'
+/Users/Krista/.rvm/gems/ruby-2.3.0/gems/cucumber-3.1.0/lib/cucumber/glue/registry_and_more.rb:106:in `load'
+/Users/Krista/.rvm/gems/ruby-2.3.0/gems/cucumber-3.1.0/lib/cucumber/glue/registry_and_more.rb:106:in `load_code_file'
+/Users/Krista/.rvm/gems/ruby-2.3.0/gems/cucumber-3.1.0/lib/cucumber/runtime/support_code.rb:147:in `load_file'
+/Users/Krista/.rvm/gems/ruby-2.3.0/gems/cucumber-3.1.0/lib/cucumber/runtime/support_code.rb:88:in `block in load_files!'
+/Users/Krista/.rvm/gems/ruby-2.3.0/gems/cucumber-3.1.0/lib/cucumber/runtime/support_code.rb:87:in `each'
+/Users/Krista/.rvm/gems/ruby-2.3.0/gems/cucumber-3.1.0/lib/cucumber/runtime/support_code.rb:87:in `load_files!'
+/Users/Krista/.rvm/gems/ruby-2.3.0/gems/cucumber-3.1.0/lib/cucumber/runtime.rb:270:in `load_step_definitions'
+/Users/Krista/.rvm/gems/ruby-2.3.0/gems/cucumber-3.1.0/lib/cucumber/runtime.rb:67:in `run!'
+/Users/Krista/.rvm/gems/ruby-2.3.0/gems/cucumber-3.1.0/lib/cucumber/cli/main.rb:33:in `execute!'
+/Users/Krista/.rvm/gems/ruby-2.3.0/gems/cucumber-3.1.0/bin/cucumber:9:in `<top (required)>'
+script/cucumber:9:in `load'
+script/cucumber:9:in `<main>'
+bash-3.2$ ls
+Gemfile			bin			features		public
+Gemfile.lock		config			lib			script
+README.md		config.ru		log			test
+Rakefile		cucumber		loginimg.jpg		vendor
+app			db			past_commited_files
+bash-3.2$ ls features/
+create.feature		step_definitions	update.feature
+login.feature		support
+bash-3.2$ ls features/step_definitions/
+sinatra_steps.rb
+bash-3.2$ bls features/step_definitions/[K[Kscript/cucumber [1@b[1@u[1@n[1@d[1@l[1@e[1@ [1@e[1@x[1@e[1@c[1@ 
+Deprecated: Found tags option '~@wip'. Support for '~@tag' will be removed from the next release of Cucumber. Please use 'not @tag' instead.
+Deprecated: Found tagged hook with '~@javascript'. Support for '~@tag' will be removed from the next release of Cucumber. Please use 'not @tag' instead.
+Deprecated: Found tagged hook with '~@no-database-cleaner'. Support for '~@tag' will be removed from the next release of Cucumber. Please use 'not @tag' instead.
+Deprecated: Found tagged hook with '~@no-database-cleaner'. Support for '~@tag' will be removed from the next release of Cucumber. Please use 'not @tag' instead.
+Deprecated: Found tagged hook with '~@no-js-emulation'. Support for '~@tag' will be removed from the next release of Cucumber. Please use 'not @tag' instead.
+Using the default profile...
+Feature: Create class and Assignment
+  In order for students to have classes and assignments
+  As a grader
+  I want to be able to add a class or new assignment
+
+  Scenario: Find New Class[90m                  # features/create.feature:6[0m
+    [33mGiven I am on the grader dashboard page[90m # features/create.feature:7[0m[0m
+[33m      Undefined step: "I am on the grader dashboard page" (Cucumber::Undefined)[0m
+[33m      script/cucumber:9:in `load'[0m
+[33m      script/cucumber:9:in `<top (required)>'[0m
+[33m      features/create.feature:7:in `Given I am on the grader dashboard page'[0m
+    [36mThen I should see "[36m[1mCreate a New Class[0m[0m[36m"[90m  # features/step_definitions/sinatra_steps.rb:5[0m[0m
+
+  Scenario: Create Class[90m                           # features/create.feature:10[0m
+    [31mWhen I click "[31m[1mCreate a New Class[0m[0m[31m"[90m              # features/step_definitions/sinatra_steps.rb:25[0m[0m
+[31m      Unable to find visible link or button "Create a New Class" (Capybara::ElementNotFound)[0m
+[31m      ./features/step_definitions/sinatra_steps.rb:26:in `/^I click "([^"]*)"$/'[0m
+[31m      features/create.feature:11:in `When I click "Create a New Class"'[0m
+    [33mAnd I enter "CSCE 222"[90m                         # features/create.feature:12[0m[0m
+[33m      Undefined step: "I enter "CSCE 222"" (Cucumber::Undefined)[0m
+[33m      script/cucumber:9:in `load'[0m
+[33m      script/cucumber:9:in `<top (required)>'[0m
+[33m      features/create.feature:12:in `And I enter "CSCE 222"'[0m
+    [36mAnd I click "[36m[1mCreate[0m[0m[36m"[90m                           # features/step_definitions/sinatra_steps.rb:25[0m[0m
+    [36mThen I should see "[36m[1mClass successfully created[0m[0m[36m"[90m # features/step_definitions/sinatra_steps.rb:5[0m[0m
+
+  Scenario: Find New Assignment[90m                 # features/create.feature:16[0m
+    [33mGiven I am on the grader dashboard page[90m     # features/create.feature:17[0m[0m
+[33m      Undefined step: "I am on the grader dashboard page" (Cucumber::Undefined)[0m
+[33m      script/cucumber:9:in `load'[0m
+[33m      script/cucumber:9:in `<top (required)>'[0m
+[33m      features/create.feature:17:in `Given I am on the grader dashboard page'[0m
+    [36mThen I should see "[36m[1mCreate a New Assignment[0m[0m[36m"[90m # features/step_definitions/sinatra_steps.rb:5[0m[0m
+
+  Scenario: Create Assignment[90m               # features/create.feature:20[0m
+    [33mGiven I am on the grader dashboard page[90m # features/create.feature:21[0m[0m
+[33m      Undefined step: "I am on the grader dashboard page" (Cucumber::Undefined)[0m
+[33m      script/cucumber:9:in `load'[0m
+[33m      script/cucumber:9:in `<top (required)>'[0m
+[33m      features/create.feature:21:in `Given I am on the grader dashboard page'[0m
+    [36mWhen I click "[36m[1mCreate a New Assignment[0m[0m[36m"[90m  # features/step_definitions/sinatra_steps.rb:25[0m[0m
+    [33mAnd I enter "Homework 1"[90m                # features/create.feature:23[0m[0m
+[33m      Undefined step: "I enter "Homework 1"" (Cucumber::Undefined)[0m
+[33m      script/cucumber:9:in `load'[0m
+[33m      script/cucumber:9:in `<top (required)>'[0m
+[33m      features/create.feature:23:in `And I enter "Homework 1"'[0m
+    [36mAnd I click "[36m[1mCreate[0m[0m[36m"[90m                    # features/step_definitions/sinatra_steps.rb:25[0m[0m
+    [36mThen I should see "[36m[1mAssigment created[0m[0m[36m"[90m   # features/step_definitions/sinatra_steps.rb:5[0m[0m
+
+Feature: Login Page
+  In order for each session to be it's own
+  As an author
+  I want user to be able to login
+
+  Scenario: Find title[90m                             # features/login.feature:6[0m
+    [33mGiven I am on the login page[90m                   # features/login.feature:7[0m[0m
+[33m      Undefined step: "I am on the login page" (Cucumber::Undefined)[0m
+[33m      script/cucumber:9:in `load'[0m
+[33m      script/cucumber:9:in `<top (required)>'[0m
+[33m      features/login.feature:7:in `Given I am on the login page'[0m
+    [36mThen I should see "[36m[1mTAMU Induction Auto Grader[0m[0m[36m"[90m # features/step_definitions/sinatra_steps.rb:5[0m[0m
+
+  Scenario: Login Button[90m         # features/login.feature:10[0m
+    [33mWhen I click login button[90m    # features/login.feature:11[0m[0m
+[33m      Undefined step: "I click login button" (Cucumber::Undefined)[0m
+[33m      script/cucumber:9:in `load'[0m
+[33m      script/cucumber:9:in `<top (required)>'[0m
+[33m      features/login.feature:11:in `When I click login button'[0m
+    [33mThen I go to Google API page[90m # features/login.feature:12[0m[0m
+[33m      Undefined step: "I go to Google API page" (Cucumber::Undefined)[0m
+[33m      script/cucumber:9:in `load'[0m
+[33m      script/cucumber:9:in `<top (required)>'[0m
+[33m      features/login.feature:12:in `Then I go to Google API page'[0m
+
+Feature: User updates their information
+  In order to provide information on myself
+  As a User
+  I want to submit my UIN and class section
+
+  Scenario: View update page[90m                                                                                                             # features/update.feature:6[0m
+    [32mGiven I am on "[32m[1m/user/edit[0m[0m[32m"[90m                                                                                                           # features/step_definitions/sinatra_steps.rb:17[0m[0m
+    [33mThen I should see "Please enter your information below."  #This can be changed, however there should probably be a page description.[90m # features/update.feature:8[0m[0m
+[33m      Undefined step: "I should see "Please enter your information below."  #This can be changed, however there should probably be a page description." (Cucumber::Undefined)[0m
+[33m      script/cucumber:9:in `load'[0m
+[33m      script/cucumber:9:in `<top (required)>'[0m
+[33m      features/update.feature:8:in `Then I should see "Please enter your information below."  #This can be changed, however there should probably be a page description.'[0m
+
+  Scenario: Find the link to the update[90m       # features/update.feature:10[0m
+    [32mGiven I am on "[32m[1m/user/edit[0m[0m[32m"[90m                # features/step_definitions/sinatra_steps.rb:17[0m[0m
+    [31mThen I should see "[31m[1mUpdate User[0m[0m[31m" in a link[90m # features/step_definitions/sinatra_steps.rb:13[0m[0m
+[31m      undefined method `should' for #<Capybara::Session> (NoMethodError)[0m
+[31m      ./features/step_definitions/sinatra_steps.rb:14:in `/^I should see "([^"]*)" in a link$/'[0m
+[31m      features/update.feature:12:in `Then I should see "Update User" in a link'[0m
+
+  Scenario: Fill out form[90m                                                                                                                                   # features/update.feature:14[0m
+    [32mGiven I am on "[32m[1m/user/edit[0m[0m[32m"[90m                                                                                                                              # features/step_definitions/sinatra_steps.rb:17[0m[0m
+    [31mWhen I fill in "[31m[1mUIN[0m[0m[31m" with "[31m[1m123456789[0m[0m[31m"[90m                                                                                                                   # features/step_definitions/sinatra_steps.rb:21[0m[0m
+[31m      Unable to find visible field "UIN" that is not disabled (Capybara::ElementNotFound)[0m
+[31m      ./features/step_definitions/sinatra_steps.rb:22:in `/^I fill in "([^"]*)" with "([^"]*)"$/'[0m
+[31m      features/update.feature:16:in `When I fill in "UIN" with "123456789"'[0m
+    [33mAnd I select from "section" with "501"[90m                                                                                                                  # features/update.feature:17[0m[0m
+[33m      Undefined step: "I select from "section" with "501"" (Cucumber::Undefined)[0m
+[33m      script/cucumber:9:in `load'[0m
+[33m      script/cucumber:9:in `<top (required)>'[0m
+[33m      features/update.feature:17:in `And I select from "section" with "501"'[0m
+    [36mAnd I click "[36m[1mUpdate User[0m[0m[36m"[90m                                                                                                                               # features/step_definitions/sinatra_steps.rb:25[0m[0m
+    [33mThen I should see "Information successfully updated." #Again this is only a suggestion, however some form of input verification would probably be good.[90m # features/update.feature:19[0m[0m
+[33m      Undefined step: "I should see "Information successfully updated." #Again this is only a suggestion, however some form of input verification would probably be good." (Cucumber::Undefined)[0m
+[33m      script/cucumber:9:in `load'[0m
+[33m      script/cucumber:9:in `<top (required)>'[0m
+[33m      features/update.feature:19:in `Then I should see "Information successfully updated." #Again this is only a suggestion, however some form of input verification would probably be good.'[0m
+
+[31mFailing Scenarios:[0m
+[31mcucumber features/create.feature:10[0m[90m # Scenario: Create Class[0m
+[31mcucumber features/update.feature:10[0m[90m # Scenario: Find the link to the update[0m
+[31mcucumber features/update.feature:14[0m[90m # Scenario: Fill out form[0m
+[33mUndefined Scenarios:[0m
+[33mcucumber features/create.feature:6[0m[90m # Scenario: Find New Class[0m
+[33mcucumber features/create.feature:16[0m[90m # Scenario: Find New Assignment[0m
+[33mcucumber features/create.feature:20[0m[90m # Scenario: Create Assignment[0m
+[33mcucumber features/login.feature:6[0m[90m # Scenario: Find title[0m
+[33mcucumber features/login.feature:10[0m[90m # Scenario: Login Button[0m
+[33mcucumber features/update.feature:6[0m[90m # Scenario: View update page[0m
+
+9 scenarios ([31m3 failed[0m, [33m6 undefined[0m)
+26 steps ([31m3 failed[0m, [36m9 skipped[0m, [33m11 undefined[0m, [32m3 passed[0m)
+0m0.231s
+[33m[0m
+[33mYou can implement step definitions for undefined steps with these snippets:[0m
+[33m[0m
+[33mGiven("I am on the grader dashboard page") do[0m
+[33m  pending # Write code here that turns the phrase above into concrete actions[0m
+[33mend[0m
+[33m[0m
+[33mWhen("I enter {string}") do |string|[0m
+[33m  pending # Write code here that turns the phrase above into concrete actions[0m
+[33mend[0m
+[33m[0m
+[33mGiven("I am on the login page") do[0m
+[33m  pending # Write code here that turns the phrase above into concrete actions[0m
+[33mend[0m
+[33m[0m
+[33mWhen("I click login button") do[0m
+[33m  pending # Write code here that turns the phrase above into concrete actions[0m
+[33mend[0m
+[33m[0m
+[33mThen("I go to Google API page") do[0m
+[33m  pending # Write code here that turns the phrase above into concrete actions[0m
+[33mend[0m
+[33m[0m
+[33mThen("I should see {string}  #This can be changed, however there should probably be a page description.") do |string|[0m
+[33m  pending # Write code here that turns the phrase above into concrete actions[0m
+[33mend[0m
+[33m[0m
+[33mWhen("I select from {string} with {string}") do |string, string2|[0m
+[33m  pending # Write code here that turns the phrase above into concrete actions[0m
+[33mend[0m
+[33m[0m
+[33mThen("I should see {string} #Again this is only a suggestion, however some form of input verification would probably be good.") do |string|[0m
+[33m  pending # Write code here that turns the phrase above into concrete actions[0m
+[33mend[0m
+
+bash-3.2$ ls
+Gemfile			bin			features		public
+Gemfile.lock		config			lib			script
+README.md		config.ru		log			test
+Rakefile		cucumber		loginimg.jpg		vendor
+app			db			past_commited_files
+bash-3.2$ ls b[Kfeatures/
+create.feature		step_definitions	update.feature
+login.feature		support
+bash-3.2$ ls features/step_definitions/
+sinatra_steps.rb
+bash-3.2$ ls script/
+cucumber
+bash-3.2$ ls script/cucumber 
+script/cucumber
+bash-3.2$ ruby script/generate cucumber
+ruby: No such file or directory -- script/generate (LoadError)
+bash-3.2$ gem install cucm[Kumber-rails
+/Users/Krista/.rvm/gems/ruby-2.3.0@global/gems/gem-wrappers-1.4.0/lib/gem-wrappers/installer.rb:56: warning: Insecure world writable dir /usr/local/bin in PATH, mode 040777
+Successfully installed cucumber-rails-1.5.0
+Parsing documentation for cucumber-rails-1.5.0
+Installing ri documentation for cucumber-rails-1.5.0
+Done installing documentation for cucumber-rails after 0 seconds
+1 gem installed
+bash-3.2$ gem install cucumber-rails[C[C[C[C[C[C[C[C[C[Cruby script/generate cucumber
+ruby: No such file or directory -- script/generate (LoadError)
+bash-3.2$ ls script/
+cucumber
+bash-3.2$ rake RAILS_ENV=cucumber gems:install
+rake aborted!
+Don't know how to build task 'gems:install' (see --tasks)
+/Users/Krista/.rvm/gems/ruby-2.3.0/gems/rake-12.3.0/exe/rake:27:in `<top (required)>'
+/Users/Krista/.rvm/gems/ruby-2.3.0/bin/ruby_executable_hooks:15:in `eval'
+/Users/Krista/.rvm/gems/ruby-2.3.0/bin/ruby_executable_hooks:15:in `<main>'
+(See full trace by running task with --trace)
+bash-3.2$ script/generate cucumber --webrat
+bash: script/generate: No such file or directory
+bash-3.2$ cucumber features
+Deprecated: Found tags option '~@wip'. Support for '~@tag' will be removed from the next release of Cucumber. Please use 'not @tag' instead.
+Deprecated: Found tagged hook with '~@javascript'. Support for '~@tag' will be removed from the next release of Cucumber. Please use 'not @tag' instead.
+Deprecated: Found tagged hook with '~@no-database-cleaner'. Support for '~@tag' will be removed from the next release of Cucumber. Please use 'not @tag' instead.
+Deprecated: Found tagged hook with '~@no-database-cleaner'. Support for '~@tag' will be removed from the next release of Cucumber. Please use 'not @tag' instead.
+Deprecated: Found tagged hook with '~@no-js-emulation'. Support for '~@tag' will be removed from the next release of Cucumber. Please use 'not @tag' instead.
+Using the default profile...
+Feature: Create class and Assignment
+  In order for students to have classes and assignments
+  As a grader
+  I want to be able to add a class or new assignment
+
+  Scenario: Find New Class[90m                  # features/create.feature:6[0m
+    [33mGiven I am on the grader dashboard page[90m # features/create.feature:7[0m[0m
+[33m      Undefined step: "I am on the grader dashboard page" (Cucumber::Undefined)[0m
+[33m      features/create.feature:7:in `Given I am on the grader dashboard page'[0m
+    [36mThen I should see "[36m[1mCreate a New Class[0m[0m[36m"[90m  # features/step_definitions/sinatra_steps.rb:5[0m[0m
+
+  Scenario: Create Class[90m                           # features/create.feature:10[0m
+    [31mWhen I click "[31m[1mCreate a New Class[0m[0m[31m"[90m              # features/step_definitions/sinatra_steps.rb:25[0m[0m
+[31m      Unable to find visible link or button "Create a New Class" (Capybara::ElementNotFound)[0m
+[31m      ./features/step_definitions/sinatra_steps.rb:26:in `/^I click "([^"]*)"$/'[0m
+[31m      features/create.feature:11:in `When I click "Create a New Class"'[0m
+    [33mAnd I enter "CSCE 222"[90m                         # features/create.feature:12[0m[0m
+[33m      Undefined step: "I enter "CSCE 222"" (Cucumber::Undefined)[0m
+[33m      features/create.feature:12:in `And I enter "CSCE 222"'[0m
+    [36mAnd I click "[36m[1mCreate[0m[0m[36m"[90m                           # features/step_definitions/sinatra_steps.rb:25[0m[0m
+    [36mThen I should see "[36m[1mClass successfully created[0m[0m[36m"[90m # features/step_definitions/sinatra_steps.rb:5[0m[0m
+
+  Scenario: Find New Assignment[90m                 # features/create.feature:16[0m
+    [33mGiven I am on the grader dashboard page[90m     # features/create.feature:17[0m[0m
+[33m      Undefined step: "I am on the grader dashboard page" (Cucumber::Undefined)[0m
+[33m      features/create.feature:17:in `Given I am on the grader dashboard page'[0m
+    [36mThen I should see "[36m[1mCreate a New Assignment[0m[0m[36m"[90m # features/step_definitions/sinatra_steps.rb:5[0m[0m
+
+  Scenario: Create Assignment[90m               # features/create.feature:20[0m
+    [33mGiven I am on the grader dashboard page[90m # features/create.feature:21[0m[0m
+[33m      Undefined step: "I am on the grader dashboard page" (Cucumber::Undefined)[0m
+[33m      features/create.feature:21:in `Given I am on the grader dashboard page'[0m
+    [36mWhen I click "[36m[1mCreate a New Assignment[0m[0m[36m"[90m  # features/step_definitions/sinatra_steps.rb:25[0m[0m
+    [33mAnd I enter "Homework 1"[90m                # features/create.feature:23[0m[0m
+[33m      Undefined step: "I enter "Homework 1"" (Cucumber::Undefined)[0m
+[33m      features/create.feature:23:in `And I enter "Homework 1"'[0m
+    [36mAnd I click "[36m[1mCreate[0m[0m[36m"[90m                    # features/step_definitions/sinatra_steps.rb:25[0m[0m
+    [36mThen I should see "[36m[1mAssigment created[0m[0m[36m"[90m   # features/step_definitions/sinatra_steps.rb:5[0m[0m
+
+Feature: Login Page
+  In order for each session to be it's own
+  As an author
+  I want user to be able to login
+
+  Scenario: Find title[90m                             # features/login.feature:6[0m
+    [33mGiven I am on the login page[90m                   # features/login.feature:7[0m[0m
+[33m      Undefined step: "I am on the login page" (Cucumber::Undefined)[0m
+[33m      features/login.feature:7:in `Given I am on the login page'[0m
+    [36mThen I should see "[36m[1mTAMU Induction Auto Grader[0m[0m[36m"[90m # features/step_definitions/sinatra_steps.rb:5[0m[0m
+
+  Scenario: Login Button[90m         # features/login.feature:10[0m
+    [33mWhen I click login button[90m    # features/login.feature:11[0m[0m
+[33m      Undefined step: "I click login button" (Cucumber::Undefined)[0m
+[33m      features/login.feature:11:in `When I click login button'[0m
+    [33mThen I go to Google API page[90m # features/login.feature:12[0m[0m
+[33m      Undefined step: "I go to Google API page" (Cucumber::Undefined)[0m
+[33m      features/login.feature:12:in `Then I go to Google API page'[0m
+
+Feature: User updates their information
+  In order to provide information on myself
+  As a User
+  I want to submit my UIN and class section
+
+  Scenario: View update page[90m                                                                                                             # features/update.feature:6[0m
+    [32mGiven I am on "[32m[1m/user/edit[0m[0m[32m"[90m                                                                                                           # features/step_definitions/sinatra_steps.rb:17[0m[0m
+    [33mThen I should see "Please enter your information below."  #This can be changed, however there should probably be a page description.[90m # features/update.feature:8[0m[0m
+[33m      Undefined step: "I should see "Please enter your information below."  #This can be changed, however there should probably be a page description." (Cucumber::Undefined)[0m
+[33m      features/update.feature:8:in `Then I should see "Please enter your information below."  #This can be changed, however there should probably be a page description.'[0m
+
+  Scenario: Find the link to the update[90m       # features/update.feature:10[0m
+    [32mGiven I am on "[32m[1m/user/edit[0m[0m[32m"[90m                # features/step_definitions/sinatra_steps.rb:17[0m[0m
+    [31mThen I should see "[31m[1mUpdate User[0m[0m[31m" in a link[90m # features/step_definitions/sinatra_steps.rb:13[0m[0m
+[31m      undefined method `should' for #<Capybara::Session> (NoMethodError)[0m
+[31m      ./features/step_definitions/sinatra_steps.rb:14:in `/^I should see "([^"]*)" in a link$/'[0m
+[31m      features/update.feature:12:in `Then I should see "Update User" in a link'[0m
+
+  Scenario: Fill out form[90m                                                                                                                                   # features/update.feature:14[0m
+    [32mGiven I am on "[32m[1m/user/edit[0m[0m[32m"[90m                                                                                                                              # features/step_definitions/sinatra_steps.rb:17[0m[0m
+    [31mWhen I fill in "[31m[1mUIN[0m[0m[31m" with "[31m[1m123456789[0m[0m[31m"[90m                                                                                                                   # features/step_definitions/sinatra_steps.rb:21[0m[0m
+[31m      Unable to find visible field "UIN" that is not disabled (Capybara::ElementNotFound)[0m
+[31m      ./features/step_definitions/sinatra_steps.rb:22:in `/^I fill in "([^"]*)" with "([^"]*)"$/'[0m
+[31m      features/update.feature:16:in `When I fill in "UIN" with "123456789"'[0m
+    [33mAnd I select from "section" with "501"[90m                                                                                                                  # features/update.feature:17[0m[0m
+[33m      Undefined step: "I select from "section" with "501"" (Cucumber::Undefined)[0m
+[33m      features/update.feature:17:in `And I select from "section" with "501"'[0m
+    [36mAnd I click "[36m[1mUpdate User[0m[0m[36m"[90m                                                                                                                               # features/step_definitions/sinatra_steps.rb:25[0m[0m
+    [33mThen I should see "Information successfully updated." #Again this is only a suggestion, however some form of input verification would probably be good.[90m # features/update.feature:19[0m[0m
+[33m      Undefined step: "I should see "Information successfully updated." #Again this is only a suggestion, however some form of input verification would probably be good." (Cucumber::Undefined)[0m
+[33m      features/update.feature:19:in `Then I should see "Information successfully updated." #Again this is only a suggestion, however some form of input verification would probably be good.'[0m
+
+[31mFailing Scenarios:[0m
+[31mcucumber features/create.feature:10[0m[90m # Scenario: Create Class[0m
+[31mcucumber features/update.feature:10[0m[90m # Scenario: Find the link to the update[0m
+[31mcucumber features/update.feature:14[0m[90m # Scenario: Fill out form[0m
+[33mUndefined Scenarios:[0m
+[33mcucumber features/create.feature:6[0m[90m # Scenario: Find New Class[0m
+[33mcucumber features/create.feature:16[0m[90m # Scenario: Find New Assignment[0m
+[33mcucumber features/create.feature:20[0m[90m # Scenario: Create Assignment[0m
+[33mcucumber features/login.feature:6[0m[90m # Scenario: Find title[0m
+[33mcucumber features/login.feature:10[0m[90m # Scenario: Login Button[0m
+[33mcucumber features/update.feature:6[0m[90m # Scenario: View update page[0m
+
+9 scenarios ([31m3 failed[0m, [33m6 undefined[0m)
+26 steps ([31m3 failed[0m, [36m9 skipped[0m, [33m11 undefined[0m, [32m3 passed[0m)
+0m0.206s
+[33m[0m
+[33mYou can implement step definitions for undefined steps with these snippets:[0m
+[33m[0m
+[33mGiven("I am on the grader dashboard page") do[0m
+[33m  pending # Write code here that turns the phrase above into concrete actions[0m
+[33mend[0m
+[33m[0m
+[33mWhen("I enter {string}") do |string|[0m
+[33m  pending # Write code here that turns the phrase above into concrete actions[0m
+[33mend[0m
+[33m[0m
+[33mGiven("I am on the login page") do[0m
+[33m  pending # Write code here that turns the phrase above into concrete actions[0m
+[33mend[0m
+[33m[0m
+[33mWhen("I click login button") do[0m
+[33m  pending # Write code here that turns the phrase above into concrete actions[0m
+[33mend[0m
+[33m[0m
+[33mThen("I go to Google API page") do[0m
+[33m  pending # Write code here that turns the phrase above into concrete actions[0m
+[33mend[0m
+[33m[0m
+[33mThen("I should see {string}  #This can be changed, however there should probably be a page description.") do |string|[0m
+[33m  pending # Write code here that turns the phrase above into concrete actions[0m
+[33mend[0m
+[33m[0m
+[33mWhen("I select from {string} with {string}") do |string, string2|[0m
+[33m  pending # Write code here that turns the phrase above into concrete actions[0m
+[33mend[0m
+[33m[0m
+[33mThen("I should see {string} #Again this is only a suggestion, however some form of input verification would probably be good.") do |string|[0m
+[33m  pending # Write code here that turns the phrase above into concrete actions[0m
+[33mend[0m
+
+bash-3.2$ ls
+Gemfile			bin			features		public
+Gemfile.lock		config			lib			script
+README.md		config.ru		log			test
+Rakefile		cucumber		loginimg.jpg		vendor
+app			db			past_commited_files
+bash-3.2$ cd features/
+bash-3.2$ ls
+create.feature		step_definitions	update.feature
+login.feature		support
+bash-3.2$ cd step_definitions/
+bash-3.2$ ls
+sinatra_steps.rb
+bash-3.2$ upd[K[K[Kcreate_steps.rb
+bash: create_steps.rb: command not found
+bash-3.2$ create_steps.rbvcreate_steps.rb[C[C[C[C[C[C[C[C[C[C[Cicreate_steps.rb[C[C[C[C[C[C[C[C[C[C[C[Cmcreate_steps.rb[C[C[C[C[C[C[C[C[C[C[C[C[C create_steps.rb
+[?2004h[?1049h[?1h=[?2004h[1;43r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[43;1H"create_steps.rb" [New File][2;1H▽[6n[2;1H  [1;1H[>c]11;?[2;1H[94m~                                                                                                                      [3;1H~                                                                                                                      [4;1H~                                                                                                                      [5;1H~                                                                                                                      [6;1H~                                                                                                                      [7;1H~                                                                                                                      [8;1H~                                                                                                                      [9;1H~                                                                                                                      [10;1H~                                                                                                                      [11;1H~                                                                                                                      [12;1H~                                                                                                                      [13;1H~                                                                                                                      [14;1H~                                                                                                                      [15;1H~                                                                                                                      [16;1H~                                                                                                                      [17;1H~                                                                                                                      [18;1H~                                                                                                                      [19;1H~                                                                                                                      [20;1H~                                                                                                                      [21;1H~                                                                                                                      [22;1H~                                                                                                                      [23;1H~                                                                                                                      [24;1H~                                                                                                                      [25;1H~                                                                                                                      [26;1H~                                                                                                                      [27;1H~                                                                                                                      [28;1H~                                                                                                                      [29;1H~                                                                                                                      [30;1H~                                                                                                                      [31;1H~                                                                                                                      [32;1H~                                                                                                                      [33;1H~                                                                                                                      [34;1H~                                                                                                                      [35;1H~                                                                                                                      [36;1H~                                                                                                                      [37;1H~                                                                                                                      [38;1H~                                                                                                                      [39;1H~                                                                                                                      [40;1H~                                                                                                                      [41;1H~                                                                                                                      [42;1H~                                                                                                                      [1;1H[?12l[?25h[?25l[m[43;1H[1m-- INSERT --[m[43;13H[K[1;1H[?12l[?25h[?25lGiven /^I am on the home page$/ do
+  visit "/"[2;12H[K[3;1Hend[3;4H[K[3;4H[?12l[?25h[2;4Hi[1;5Hn /^I am on the home page[?25l$/ do[1;34H[K[1;29H[?12l[?25h[?25l$/ do[1;33H[K[1;28H[?12l[?25h[?25l$/ do[1;32H[K[1;27H[?12l[?25h[?25l$/ do[1;31H[K[1;26H[?12l[?25h[?25l$/ do[1;30H[K[1;25H[?12l[?25h[?25l$/ do[1;29H[K[1;24H[?12l[?25h[?25l$/ do[1;28H[K[1;23H[?12l[?25h[?25l$/ do[1;27H[K[1;22H[?12l[?25h[?25l$/ do[1;26H[K[1;21H[?12l[?25h[?25lu$/ do[?12l[?25h[?25ls$/ do[?12l[?25h[?25le$/ do[?12l[?25h[?25lr$/ do[?12l[?25h[?25l $/ do[?12l[?25h[?25l$/ do[1;30H[K[1;25H[?12l[?25h[?25l$/ do[1;29H[K[1;24H[?12l[?25h[?25l$/ do[1;28H[K[1;23H[?12l[?25h[?25l$/ do[1;27H[K[1;22H[?12l[?25h[?25l$/ do[1;26H[K[1;21H[?12l[?25h[?25lg$/ do[?12l[?25h[?25lr$/ do[?12l[?25h[?25la$/ do[?12l[?25h[?25ld$/ do[?12l[?25h[?25le$/ do[?12l[?25h[?25lr$/ do[?12l[?25h[?25l $/ do[?12l[?25h[?25ls$/ do[?12l[?25h[?25lh$/ do[?12l[?25h[?25la$/ do[?12l[?25h[?25l$/ do[1;35H[K[1;30H[?12l[?25h[?25l$/ do[1;34H[K[1;29H[?12l[?25h[?25l$/ do[1;33H[K[1;28H[?12l[?25h[?25ld$/ do[?12l[?25h[?25la$/ do[?12l[?25h[?25ls$/ do[?12l[?25h[?25lh$/ do[?12l[?25h[?25lb$/ do[?12l[?25h[?25lo$/ do[?12l[?25h[?25la$/ do[?12l[?25h[?25lr$/ do[?12l[?25h[?25ld$/ do[?12l[?25h[43;1H[K[1;36H[?25l[?12l[?25h[?25l[43;1H:[?2004h[?12l[?25hwq[?25l[?2004l"create_steps.rb" [New] 3L, 58C written
+[?2004l[?1l>[?12l[?25h[?1049lbash-3.2$ 
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ ls
+create_steps.rb		sinatra_steps.rb
+bash-3.2$ cd ../
+bash-3.2$ ls
+create.feature		step_definitions	update.feature
+login.feature		support
+bash-3.2$ vim create.feature 
+[?2004h[?1049h[?1h=[?2004h[1;43r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[43;1H"create.feature" [noeol] 25L, 794C[2;1H▽[6n[2;1H  [1;1H[>c]11;?[1;1HFeature: Create class and Assignment
+  In order for students to have classes and assignments
+  As a grader
+  I want to be able to add a class or new assignment
+
+  Scenario: Find New Class
+    Given I am on the grader dashboard page
+    Then I should see "Create a New Class"
+
+  Scenario: Create Class
+    When I click "Create a New Class"
+    And I enter "CSCE 222"
+    And I click "Create"
+    Then I should see "Class successfully created"
+
+  Scenario: Find New Assignment
+    Given I am on the grader dashboard page
+    Then I should see "Create a New Assignment"
+
+  Scenario: Create Assignment
+    Given I am on the grader dashboard page
+    When I click "Create a New Assignment"
+    And I enter "Homework 1"
+    And I click "Create"
+    Then I should see "Assigment created"
+[94m~                                                                                                                      [27;1H~                                                                                                                      [28;1H~                                                                                                                      [29;1H~                                                                                                                      [30;1H~                                                                                                                      [31;1H~                                                                                                                      [32;1H~                                                                                                                      [33;1H~                                                                                                                      [34;1H~                                                                                                                      [35;1H~                                                                                                                      [36;1H~                                                                                                                      [37;1H~                                                                                                                      [38;1H~                                                                                                                      [39;1H~                                                                                                                      [40;1H~                                                                                                                      [41;1H~                                                                                                                      [42;1H~                                                                                                                      [1;1H[?12l[?25h
+
+
+
+
+
+
+[m    Then I should see "CrCreate a New Class[?25l[43;1H[1m-- INSERT --[m[43;13H[K[8;42H[?12l[?25h"[?25l [?12l[?25h[?25li[?12l[?25h[?25ln[?12l[?25h[?25l [?12l[?25h[?25la[?12l[?25h[?25l [?12l[?25h[?25ll[?12l[?25h[?25li[?12l[?25h[?25ln[?12l[?25h[?25le[?12l[?25h[?25l[8;52H[K[8;52H[?12l[?25h[?25lk[?12l[?25h
+    [10;25H[11;38H[12;27H[11;38H[12;27H[11;38H[12;27H[13;25H[12;27H[13;25H[14;18H see "C
+    [16;25H[17;25Hader dashbo[18;36H
+    [18;36H Assignment"[?25li[?12l[?25h[?25l[18;48H[K[18;48H[?12l[?25h[?25l [?12l[?25h[?25li[?12l[?25h[?25ln[?12l[?25h[?25l [?12l[?25h[?25la[?12l[?25h[?25l [?12l[?25h[?25ll[?12l[?25h[?25li[?12l[?25h[?25ln[?12l[?25h[?25lk[?12l[?25h[43;1H[K[18;57H[?25l[?12l[?25h[?25l[43;1H:[?2004h[?12l[?25hwq[?25l[?2004l"create.feature" 25L, 815C written
+[?2004l[?1l>[?12l[?25h[?1049lbash-3.2$ vim create.feature 
+[?2004h[?1049h[?1h=[?2004h[1;43r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[43;1H"create.feature" 25L, 815C[2;1H▽[6n[2;1H  [1;1H[>c]11;?[1;1HFeature: Create class and Assignment
+  In order for students to have classes and assignments
+  As a grader
+  I want to be able to add a class or new assignment
+
+  Scenario: Find New Class
+    Given I am on the grader dashboard page
+    Then I should see "Create a New Class" in a link
+
+  Scenario: Create Class
+    When I click "Create a New Class"
+    And I enter "CSCE 222"
+    And I click "Create"
+    Then I should see "Class successfully created"
+
+  Scenario: Find New Assignment
+    Given I am on the grader dashboard page
+    Then I should see "Create a New Assignment" in a link
+
+  Scenario: Create Assignment
+    Given I am on the grader dashboard page
+    When I click "Create a New Assignment"
+    And I enter "Homework 1"
+    And I click "Create"
+    Then I should see "Assigment created"
+[94m~                                                                                                                      [27;1H~                                                                                                                      [28;1H~                                                                                                                      [29;1H~                                                                                                                      [30;1H~                                                                                                                      [31;1H~                                                                                                                      [32;1H~                                                                                                                      [33;1H~                                                                                                                      [34;1H~                                                                                                                      [35;1H~                                                                                                                      [36;1H~                                                                                                                      [37;1H~                                                                                                                      [38;1H~                                                                                                                      [39;1H~                                                                                                                      [40;1H~                                                                                                                      [41;1H~                                                                                                                      [42;1H~                                                                                                                      [1;1H[?12l[?25h
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[m    And I enternter[?25l[43;1H[1m-- INSERT --[m[43;13H[K[23;16H[?12l[?25h[?25l "Homework 1"[23;28H[K[23;15H[?12l[?25h[?25l "Homework 1"[23;27H[K[23;14H[?12l[?25h[?25l "Homework 1"[23;26H[K[23;13H[?12l[?25h[?25l "Homework 1"[23;25H[K[23;12H[?12l[?25h[?25l "Homework 1"[23;24H[K[23;11H[?12l[?25h[?25lf "Homework 1"[23;12H[?12l[?25h[?25li "Homework 1"[23;13H[?12l[?25h[?25ll "Homework 1"[23;14H[?12l[?25h[?25ll "Homework 1"[23;15H[?12l[?25h[?25l  "Homework 1"[23;16H[?12l[?25h[?25li "Homework 1"[23;17H[?12l[?25h[?25ln "Homework 1"[23;18H[?12l[?25h[?25l  "Homework 1"[23;19H[?12l[?25h[?25l" "Homework 1"[23;20H[?12l[?25h[?25l" "Homework 1"[23;21H[?12l[?25h[?25lT" "Homework 1"[23;21H[?12l[?25h[?25l" "Homework 1"[23;34H[K[23;20H[?12l[?25h[?25lt" "Homework 1"[23;21H[?12l[?25h[?25li" "Homework 1"[23;22H[?12l[?25h[?25l" "Homework 1"[23;35H[K[23;21H[?12l[?25h[?25l" "Homework 1"[23;34H[K[23;20H[?12l[?25h[?25lT" "Homework 1"[23;21H[?12l[?25h[?25li" "Homework 1"[23;22H[?12l[?25h[?25ll" "Homework 1"[23;23H[?12l[?25h[?25l" "Homework 1"[23;36H[K[23;22H[?12l[?25h[?25lt" "Homework 1"[23;23H[?12l[?25h[?25ll" "Homework 1"[23;24H[?12l[?25h[?25le" "Homework 1"[23;25H[?12l[?25h"[?25l  "Homework 1"[23;27H[?12l[?25h[?25lw "Homework 1"[23;28H[?12l[?25h[?25li "Homework 1"[23;29H[?12l[?25h[?25lt "Homework 1"[23;30H[?12l[?25h[?25lh "Homework 1"[23;31H[?12l[?25h[24;25H[23;17H[22;17H[21;17H[20;17H[19;5H[18;17H[17;17H[16;17H[15;5H[14;17H[13;17H[12;17H[?25l "CSCE 222"[12;26H[K[12;15H[?12l[?25h[?25l "CSCE 222"[12;25H[K[12;14H[?12l[?25h[?25l "CSCE 222"[12;24H[K[12;13H[?12l[?25h[?25l "CSCE 222"[12;23H[K[12;12H[?12l[?25h[?25l "CSCE 222"[12;22H[K[12;11H[?12l[?25h[?25lf "CSCE 222"[12;12H[?12l[?25h[?25li "CSCE 222"[12;13H[?12l[?25h[?25ll "CSCE 222"[12;14H[?12l[?25h[?25ll "CSCE 222"[12;15H[?12l[?25h[?25l  "CSCE 222"[12;16H[?12l[?25h[?25li "CSCE 222"[12;17H[?12l[?25h[?25l "CSCE 222"[12;27H[K[12;16H[?12l[?25h[?25l"CSCE 222"[12;26H[K[12;15H[?12l[?25h[?25l  "CSCE 222"[12;16H[?12l[?25h[?25li "CSCE 222"[12;17H[?12l[?25h[?25ln "CSCE 222"[12;18H[?12l[?25h[?25l  "CSCE 222"[12;19H[?12l[?25h[?25l" "CSCE 222"[12;20H[?12l[?25h[?25l" "CSCE 222"[12;21H[?12l[?25h[?25lt" "CSCE 222"[12;21H[?12l[?25h[?25li" "CSCE 222"[12;22H[?12l[?25h[?25l" "CSCE 222"[12;33H[K[12;21H[?12l[?25h[?25l" "CSCE 222"[12;32H[K[12;20H[?12l[?25h[?25lT" "CSCE 222"[12;21H[?12l[?25h[?25li" "CSCE 222"[12;22H[?12l[?25h[?25lt" "CSCE 222"[12;23H[?12l[?25h[?25ll" "CSCE 222"[12;24H[?12l[?25h[?25le" "CSCE 222"[12;25H[?12l[?25h"[?25l  "CSCE 222"[12;27H[?12l[?25h[?25lw "CSCE 222"[12;28H[?12l[?25h[?25li "CSCE 222"[12;29H[?12l[?25h[?25lt "CSCE 222"[12;30H[?12l[?25h[?25lh "CSCE 222"[12;31H[?12l[?25h "CSCE [43;1H[K[12;37H[?25l[?12l[?25h[?25l[43;1H:[?2004h[?12l[?25hwq[?25l[?2004l"create.feature" 25L, 845C written
+[?2004l[?1l>[?12l[?25h[?1049lbash-3.2$ cd ../
+bash-3.2$ ls
+Gemfile			bin			features		public
+Gemfile.lock		config			lib			script
+README.md		config.ru		log			test
+Rakefile		cucumber		loginimg.jpg		vendor
+app			db			past_commited_files
+bash-3.2$ cucumber features
+Deprecated: Found tags option '~@wip'. Support for '~@tag' will be removed from the next release of Cucumber. Please use 'not @tag' instead.
+Deprecated: Found tagged hook with '~@javascript'. Support for '~@tag' will be removed from the next release of Cucumber. Please use 'not @tag' instead.
+Deprecated: Found tagged hook with '~@no-database-cleaner'. Support for '~@tag' will be removed from the next release of Cucumber. Please use 'not @tag' instead.
+Deprecated: Found tagged hook with '~@no-database-cleaner'. Support for '~@tag' will be removed from the next release of Cucumber. Please use 'not @tag' instead.
+Deprecated: Found tagged hook with '~@no-js-emulation'. Support for '~@tag' will be removed from the next release of Cucumber. Please use 'not @tag' instead.
+Using the default profile...
+Feature: Create class and Assignment
+  In order for students to have classes and assignments
+  As a grader
+  I want to be able to add a class or new assignment
+
+  Scenario: Find New Class[90m                           # features/create.feature:6[0m
+    [33mGiven I am on the grader dashboard page[90m          # features/create.feature:7[0m[0m
+[33m      Undefined step: "I am on the grader dashboard page" (Cucumber::Undefined)[0m
+[33m      features/create.feature:7:in `Given I am on the grader dashboard page'[0m
+    [36mThen I should see "[36m[1mCreate a New Class[0m[0m[36m" in a link[90m # features/step_definitions/sinatra_steps.rb:13[0m[0m
+
+  Scenario: Create Class[90m                           # features/create.feature:10[0m
+    [31mWhen I click "[31m[1mCreate a New Class[0m[0m[31m"[90m              # features/step_definitions/sinatra_steps.rb:25[0m[0m
+[31m      Unable to find visible link or button "Create a New Class" (Capybara::ElementNotFound)[0m
+[31m      ./features/step_definitions/sinatra_steps.rb:26:in `/^I click "([^"]*)"$/'[0m
+[31m      features/create.feature:11:in `When I click "Create a New Class"'[0m
+    [36mAnd I fill in "[36m[1mTitle[0m[0m[36m" with "[36m[1mCSCE 222[0m[0m[36m"[90m          # features/step_definitions/sinatra_steps.rb:21[0m[0m
+    [36mAnd I click "[36m[1mCreate[0m[0m[36m"[90m                           # features/step_definitions/sinatra_steps.rb:25[0m[0m
+    [36mThen I should see "[36m[1mClass successfully created[0m[0m[36m"[90m # features/step_definitions/sinatra_steps.rb:5[0m[0m
+
+  Scenario: Find New Assignment[90m                           # features/create.feature:16[0m
+    [33mGiven I am on the grader dashboard page[90m               # features/create.feature:17[0m[0m
+[33m      Undefined step: "I am on the grader dashboard page" (Cucumber::Undefined)[0m
+[33m      features/create.feature:17:in `Given I am on the grader dashboard page'[0m
+    [36mThen I should see "[36m[1mCreate a New Assignment[0m[0m[36m" in a link[90m # features/step_definitions/sinatra_steps.rb:13[0m[0m
+
+  Scenario: Create Assignment[90m               # features/create.feature:20[0m
+    [33mGiven I am on the grader dashboard page[90m # features/create.feature:21[0m[0m
+[33m      Undefined step: "I am on the grader dashboard page" (Cucumber::Undefined)[0m
+[33m      features/create.feature:21:in `Given I am on the grader dashboard page'[0m
+    [36mWhen I click "[36m[1mCreate a New Assignment[0m[0m[36m"[90m  # features/step_definitions/sinatra_steps.rb:25[0m[0m
+    [36mAnd I fill in "[36m[1mTitle[0m[0m[36m" with "[36m[1mHomework 1[0m[0m[36m"[90m # features/step_definitions/sinatra_steps.rb:21[0m[0m
+    [36mAnd I click "[36m[1mCreate[0m[0m[36m"[90m                    # features/step_definitions/sinatra_steps.rb:25[0m[0m
+    [36mThen I should see "[36m[1mAssigment created[0m[0m[36m"[90m   # features/step_definitions/sinatra_steps.rb:5[0m[0m
+
+Feature: Login Page
+  In order for each session to be it's own
+  As an author
+  I want user to be able to login
+
+  Scenario: Find title[90m                             # features/login.feature:6[0m
+    [33mGiven I am on the login page[90m                   # features/login.feature:7[0m[0m
+[33m      Undefined step: "I am on the login page" (Cucumber::Undefined)[0m
+[33m      features/login.feature:7:in `Given I am on the login page'[0m
+    [36mThen I should see "[36m[1mTAMU Induction Auto Grader[0m[0m[36m"[90m # features/step_definitions/sinatra_steps.rb:5[0m[0m
+
+  Scenario: Login Button[90m         # features/login.feature:10[0m
+    [33mWhen I click login button[90m    # features/login.feature:11[0m[0m
+[33m      Undefined step: "I click login button" (Cucumber::Undefined)[0m
+[33m      features/login.feature:11:in `When I click login button'[0m
+    [33mThen I go to Google API page[90m # features/login.feature:12[0m[0m
+[33m      Undefined step: "I go to Google API page" (Cucumber::Undefined)[0m
+[33m      features/login.feature:12:in `Then I go to Google API page'[0m
+
+Feature: User updates their information
+  In order to provide information on myself
+  As a User
+  I want to submit my UIN and class section
+
+  Scenario: View update page[90m                                                                                                             # features/update.feature:6[0m
+    [32mGiven I am on "[32m[1m/user/edit[0m[0m[32m"[90m                                                                                                           # features/step_definitions/sinatra_steps.rb:17[0m[0m
+    [33mThen I should see "Please enter your information below."  #This can be changed, however there should probably be a page description.[90m # features/update.feature:8[0m[0m
+[33m      Undefined step: "I should see "Please enter your information below."  #This can be changed, however there should probably be a page description." (Cucumber::Undefined)[0m
+[33m      features/update.feature:8:in `Then I should see "Please enter your information below."  #This can be changed, however there should probably be a page description.'[0m
+
+  Scenario: Find the link to the update[90m       # features/update.feature:10[0m
+    [32mGiven I am on "[32m[1m/user/edit[0m[0m[32m"[90m                # features/step_definitions/sinatra_steps.rb:17[0m[0m
+    [31mThen I should see "[31m[1mUpdate User[0m[0m[31m" in a link[90m # features/step_definitions/sinatra_steps.rb:13[0m[0m
+[31m      undefined method `should' for #<Capybara::Session> (NoMethodError)[0m
+[31m      ./features/step_definitions/sinatra_steps.rb:14:in `/^I should see "([^"]*)" in a link$/'[0m
+[31m      features/update.feature:12:in `Then I should see "Update User" in a link'[0m
+
+  Scenario: Fill out form[90m                                                                                                                                   # features/update.feature:14[0m
+    [32mGiven I am on "[32m[1m/user/edit[0m[0m[32m"[90m                                                                                                                              # features/step_definitions/sinatra_steps.rb:17[0m[0m
+    [31mWhen I fill in "[31m[1mUIN[0m[0m[31m" with "[31m[1m123456789[0m[0m[31m"[90m                                                                                                                   # features/step_definitions/sinatra_steps.rb:21[0m[0m
+[31m      Unable to find visible field "UIN" that is not disabled (Capybara::ElementNotFound)[0m
+[31m      ./features/step_definitions/sinatra_steps.rb:22:in `/^I fill in "([^"]*)" with "([^"]*)"$/'[0m
+[31m      features/update.feature:16:in `When I fill in "UIN" with "123456789"'[0m
+    [33mAnd I select from "section" with "501"[90m                                                                                                                  # features/update.feature:17[0m[0m
+[33m      Undefined step: "I select from "section" with "501"" (Cucumber::Undefined)[0m
+[33m      features/update.feature:17:in `And I select from "section" with "501"'[0m
+    [36mAnd I click "[36m[1mUpdate User[0m[0m[36m"[90m                                                                                                                               # features/step_definitions/sinatra_steps.rb:25[0m[0m
+    [33mThen I should see "Information successfully updated." #Again this is only a suggestion, however some form of input verification would probably be good.[90m # features/update.feature:19[0m[0m
+[33m      Undefined step: "I should see "Information successfully updated." #Again this is only a suggestion, however some form of input verification would probably be good." (Cucumber::Undefined)[0m
+[33m      features/update.feature:19:in `Then I should see "Information successfully updated." #Again this is only a suggestion, however some form of input verification would probably be good.'[0m
+
+[31mFailing Scenarios:[0m
+[31mcucumber features/create.feature:10[0m[90m # Scenario: Create Class[0m
+[31mcucumber features/update.feature:10[0m[90m # Scenario: Find the link to the update[0m
+[31mcucumber features/update.feature:14[0m[90m # Scenario: Fill out form[0m
+[33mUndefined Scenarios:[0m
+[33mcucumber features/create.feature:6[0m[90m # Scenario: Find New Class[0m
+[33mcucumber features/create.feature:16[0m[90m # Scenario: Find New Assignment[0m
+[33mcucumber features/create.feature:20[0m[90m # Scenario: Create Assignment[0m
+[33mcucumber features/login.feature:6[0m[90m # Scenario: Find title[0m
+[33mcucumber features/login.feature:10[0m[90m # Scenario: Login Button[0m
+[33mcucumber features/update.feature:6[0m[90m # Scenario: View update page[0m
+
+9 scenarios ([31m3 failed[0m, [33m6 undefined[0m)
+26 steps ([31m3 failed[0m, [36m11 skipped[0m, [33m9 undefined[0m, [32m3 passed[0m)
+0m0.215s
+[33m[0m
+[33mYou can implement step definitions for undefined steps with these snippets:[0m
+[33m[0m
+[33mGiven("I am on the grader dashboard page") do[0m
+[33m  pending # Write code here that turns the phrase above into concrete actions[0m
+[33mend[0m
+[33m[0m
+[33mGiven("I am on the login page") do[0m
+[33m  pending # Write code here that turns the phrase above into concrete actions[0m
+[33mend[0m
+[33m[0m
+[33mWhen("I click login button") do[0m
+[33m  pending # Write code here that turns the phrase above into concrete actions[0m
+[33mend[0m
+[33m[0m
+[33mThen("I go to Google API page") do[0m
+[33m  pending # Write code here that turns the phrase above into concrete actions[0m
+[33mend[0m
+[33m[0m
+[33mThen("I should see {string}  #This can be changed, however there should probably be a page description.") do |string|[0m
+[33m  pending # Write code here that turns the phrase above into concrete actions[0m
+[33mend[0m
+[33m[0m
+[33mWhen("I select from {string} with {string}") do |string, string2|[0m
+[33m  pending # Write code here that turns the phrase above into concrete actions[0m
+[33mend[0m
+[33m[0m
+[33mThen("I should see {string} #Again this is only a suggestion, however some form of input verification would probably be good.") do |string|[0m
+[33m  pending # Write code here that turns the phrase above into concrete actions[0m
+[33mend[0m
+
+bash-3.2$ ls
+Gemfile			bin			features		public
+Gemfile.lock		config			lib			script
+README.md		config.ru		log			test
+Rakefile		cucumber		loginimg.jpg		vendor
+app			db			past_commited_files
+bash-3.2$ cd features/
+bash-3.2$ ls
+create.feature		step_definitions	update.feature
+login.feature		support
+bash-3.2$ mkdire support
+bash: mkdire: command not found
+bash-3.2$ mkdire support[C[1P support
+mkdir: support: File exists
+bash-3.2$ ls
+create.feature		step_definitions	update.feature
+login.feature		support
+bash-3.2$ cd support/
+bash-3.2$ ls
+env.rb
+bash-3.2$ mk[K[Kvim paths.rb
+[?2004h[?1049h[?1h=[?2004h[1;43r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[43;1H"paths.rb" [New File][2;1H▽[6n[2;1H  [1;1H[>c]11;?[2;1H[94m~                                                                                                                      [3;1H~                                                                                                                      [4;1H~                                                                                                                      [5;1H~                                                                                                                      [6;1H~                                                                                                                      [7;1H~                                                                                                                      [8;1H~                                                                                                                      [9;1H~                                                                                                                      [10;1H~                                                                                                                      [11;1H~                                                                                                                      [12;1H~                                                                                                                      [13;1H~                                                                                                                      [14;1H~                                                                                                                      [15;1H~                                                                                                                      [16;1H~                                                                                                                      [17;1H~                                                                                                                      [18;1H~                                                                                                                      [19;1H~                                                                                                                      [20;1H~                                                                                                                      [21;1H~                                                                                                                      [22;1H~                                                                                                                      [23;1H~                                                                                                                      [24;1H~                                                                                                                      [25;1H~                                                                                                                      [26;1H~                                                                                                                      [27;1H~                                                                                                                      [28;1H~                                                                                                                      [29;1H~                                                                                                                      [30;1H~                                                                                                                      [31;1H~                                                                                                                      [32;1H~                                                                                                                      [33;1H~                                                                                                                      [34;1H~                                                                                                                      [35;1H~                                                                                                                      [36;1H~                                                                                                                      [37;1H~                                                                                                                      [38;1H~                                                                                                                      [39;1H~                                                                                                                      [40;1H~                                                                                                                      [41;1H~                                                                                                                      [42;1H~                                                                                                                      [1;1H[?12l[?25h[?25l[m[43;1H[1m-- INSERT --[m[43;13H[K[1;1H[?12l[?25h[?25lm[?12l[?25h[?25lo[?12l[?25h[?25ld[?12l[?25h[?25le[?12l[?25h[?25l[1;4H[K[1;4H[?12l[?25h[?25lu[?12l[?25h[?25ll[?12l[?25h[?25le[?12l[?25h[?25l [?12l[?25h[?25lN[?12l[?25h[?25la[?12l[?25h[?25lv[?12l[?25h[?25li[?12l[?25h[?25lg[?12l[?25h[?25la[?12l[?25h[?25lt[?12l[?25h[?25li[?12l[?25h[?25lo[?12l[?25h[?25ln[?12l[?25h[?25lH[?12l[?25h[?25le[?12l[?25h[?25ll[?12l[?25h[?25lp[?12l[?25h[?25le[?12l[?25h[?25lr[?12l[?25h[?25ls[?12l[?25h[?25l[2;1H[K[2;1H[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l[?12l[?25h[?25ld[?12l[?25h[?25le[?12l[?25h[?25lf[?12l[?25h[?25l [?12l[?25h[?25lp[?12l[?25h[?25la[?12l[?25h[?25lt[?12l[?25h[?25lh[?12l[?25h[?25l_[?12l[?25h[?25lt[?12l[?25h[?25lo[?12l[?25h[?25l([?12l[?25h[?25lp[?12l[?25h[?25la[?12l[?25h[?25lg[?12l[?25h[?25le[?12l[?25h[?25l_[?12l[?25h[?25ln[?12l[?25h[?25la[?12l[?25h[?25lm[?12l[?25h[?25le[?12l[?25h[?25l[2;14H[106m([9C)[?12l[?25h[?25l[m[2;14H([9C)[3;1H[K[3;1H[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25lc[?12l[?25h[?25la[?12l[?25h[?25ls[?12l[?25h[?25le[?12l[?25h[?25l [?12l[?25h[?25lp[?12l[?25h[?25la[?12l[?25h[?25lg[?12l[?25h[?25le[?12l[?25h[?25l_[?12l[?25h[?25lN[?12l[?25h[?25l[3;15H[K[3;15H[?12l[?25h[?25ln[?12l[?25h[?25la[?12l[?25h[?25lm[?12l[?25h[?25le[?12l[?25h[?25l[4;1H[K[4;1H[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[5;1H[K[5;1H[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25lw[?12l[?25h[?25lh[?12l[?25h[?25le[?12l[?25h[?25ln[?12l[?25h[?25l [?12l[?25h[?25l/[?12l[?25h[?25lt[?12l[?25h[?25lh[?12l[?25h[?25le[?12l[?25h[?25l [?12l[?25h[?25lh[?12l[?25h[?25lo[?12l[?25h[?25lm[?12l[?25h[?25le[?12l[?25h[?25lp[?12l[?25h[?25la[?12l[?25h[?25lg[?12l[?25h[?25le[?12l[?25h[?25l/[?12l[?25h[?25l[6;1H[K[6;1H[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25lr[?12l[?25h[?25lo[?12l[?25h[?25lo[?12l[?25h[?25lt[?12l[?25h[?25l_[?12l[?25h[?25lp[?12l[?25h[?25la[?12l[?25h[?25lt[?12l[?25h[?25lh[?12l[?25h[?25l[7;1H[K[7;1H[?12l[?25h[?25l[8;1H[K[8;1H[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l#[?12l[?25h[?25l [?12l[?25h[?25la[?12l[?25h[?25ld[?12l[?25h[?25ld[?12l[?25h[?25l [?12l[?25h[?25lp[?12l[?25h[?25la[?12l[?25h[?25lg[?12l[?25h[?25le[?12l[?25h[?25l [?12l[?25h[?25ln[?12l[?25h[?25la[?12l[?25h[?25lm[?12l[?25h[?25le[?12l[?25h[?25ls[?12l[?25h[?25l [?12l[?25h[?25ll[?12l[?25h[?25la[?12l[?25h[?25lt[?12l[?25h[?25le[?12l[?25h[?25lr[?12l[?25h[?25l[9;1H[K[9;1H[?12l[?25h[?25l [?12l[?25h[?25l[10;1H[K[10;1H[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25le[?12l[?25h[?25ll[?12l[?25h[?25ls[?12l[?25h[?25le[?12l[?25h[?25l [?12l[?25h[?25l[11;1H[K[11;1H[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25lr[?12l[?25h[?25la[?12l[?25h[?25li[?12l[?25h[?25ls[?12l[?25h[?25le[?12l[?25h[?25l [?12l[?25h[?25l"[?12l[?25h[?25lC[?12l[?25h[?25la[?12l[?25h[?25ln[?12l[?25h[?25l'[?12l[?25h[?25lt[?12l[?25h[?25l [?12l[?25h[?25lf[?12l[?25h[?25li[?12l[?25h[?25ln[?12l[?25h[?25ld[?12l[?25h[?25l [?12l[?25h[?25lm[?12l[?25h[?25la[?12l[?25h[?25lp[?12l[?25h[?25lp[?12l[?25h[?25li[?12l[?25h[?25ln[?12l[?25h[?25lg[?12l[?25h[?25l [?12l[?25h[?25lf[?12l[?25h[?25lr[?12l[?25h[?25lo[?12l[?25h[?25lm[?12l[?25h[?25l [?12l[?25h[?25l\[?12l[?25h[?25l"[?12l[?25h[?25l#[?12l[?25h[?25l{[?12l[?25h[?25lp[?12l[?25h[?25la[?12l[?25h[?25lg[?12l[?25h[?25le[?12l[?25h[?25l_[?12l[?25h[?25ln[?12l[?25h[?25la[?12l[?25h[?25lm[?12l[?25h[?25le[?12l[?25h[?25l[11;41H[106m{[9C}[?12l[?25h[?25l[m[11;41H{[9C}\[?12l[?25h[?25l"[?12l[?25h[?25l [?12l[?25h[?25lt[?12l[?25h[?25lo[?12l[?25h[?25l [?12l[?25h[?25la[?12l[?25h[?25l [?12l[?25h[?25lp[?12l[?25h[?25la[?12l[?25h[?25lt[?12l[?25h[?25lh[?12l[?25h[?25l.[?12l[?25h[?25l"[?12l[?25h[?25l[12;1H[K[12;1H[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25le[?12l[?25h[?25ln[?12l[?25h[?25ld[?12l[?25h[?25l[13;1H[K[13;1H[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25le[?12l[?25h[?25ln[?12l[?25h[?25ld[?12l[?25h[?25l[14;1H[K[14;1H[?12l[?25h[?25le[?12l[?25h[?25ln[?12l[?25h[?25ld[?12l[?25h[?25l[15;1H[K[15;1H[?12l[?25h[?25l[16;1H[K[16;1H[?12l[?25h[?25lW[?12l[?25h[?25lo[?12l[?25h[?25lr[?12l[?25h[?25ll[?12l[?25h[?25ld[?12l[?25h[?25l [?12l[?25h[?25ld[?12l[?25h[?25lo[?12l[?25h[?25l [?12l[?25h[?25l|[?12l[?25h[?25lw[?12l[?25h[?25lo[?12l[?25h[?25lr[?12l[?25h[?25ll[?12l[?25h[?25ld[?12l[?25h[?25l|[?12l[?25h[?25l[17;1H[K[17;1H[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25lw[?12l[?25h[?25lo[?12l[?25h[?25lr[?12l[?25h[?25ll[?12l[?25h[?25ld[?12l[?25h[?25l.[?12l[?25h[?25le[?12l[?25h[?25lx[?12l[?25h[?25lt[?12l[?25h[?25le[?12l[?25h[?25ln[?12l[?25h[?25ld[?12l[?25h[?25l [?12l[?25h[?25lN[?12l[?25h[?25la[?12l[?25h[?25lv[?12l[?25h[?25li[?12l[?25h[?25lg[?12l[?25h[?25la[?12l[?25h[?25li[?12l[?25h[?25lo[?12l[?25h[?25l[17;23H[K[17;23H[?12l[?25h[?25l[17;22H[K[17;22H[?12l[?25h[?25lt[?12l[?25h[?25li[?12l[?25h[?25lo[?12l[?25h[?25ln[?12l[?25h[?25lh[?12l[?25h[?25le[?12l[?25h[?25ll[?12l[?25h[?25lp[?12l[?25h[?25le[?12l[?25h[?25lr[?12l[?25h[?25ls[?12l[?25h[?25l[18;1H[K[18;1H[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25lw[?12l[?25h[?25lo[?12l[?25h[?25lr[?12l[?25h[?25ll[?12l[?25h[?25ld[?12l[?25h[?25l[19;1H[K[19;1H[?12l[?25h[?25le[?12l[?25h[?25ln[?12l[?25h[?25ld[?12l[?25h[18;4H[17;4Horld.extend Navigationh[?25lelpers[17;32H[K[17;26H[?12l[?25h[?25lHelpers[?12l[?25h[43;1H[K[17;26H[?25l[?12l[?25h[?25l[43;1H:[?2004h[?12l[?25hwq[?25l[?2004l"paths.rb" [New] 19L, 301C written
+[?2004l[?1l>[?12l[?25h[?1049lbash-3.2$ cd ../
+bash-3.2$ pwd
+/Users/Krista/repos/AutoGrader-Induction/features
+bash-3.2$ cd ..
+bash-3.2$ cucume[Kber features
+Deprecated: Found tags option '~@wip'. Support for '~@tag' will be removed from the next release of Cucumber. Please use 'not @tag' instead.
+Deprecated: Found tagged hook with '~@javascript'. Support for '~@tag' will be removed from the next release of Cucumber. Please use 'not @tag' instead.
+Deprecated: Found tagged hook with '~@no-database-cleaner'. Support for '~@tag' will be removed from the next release of Cucumber. Please use 'not @tag' instead.
+Deprecated: Found tagged hook with '~@no-database-cleaner'. Support for '~@tag' will be removed from the next release of Cucumber. Please use 'not @tag' instead.
+Deprecated: Found tagged hook with '~@no-js-emulation'. Support for '~@tag' will be removed from the next release of Cucumber. Please use 'not @tag' instead.
+You can only pass a proc to #World once, but it's happening
+in 2 places:
+
+cucumber-rails-1.5.0/lib/cucumber/rails/world.rb:24:in `World'
+features/support/paths.rb:16:in `World'
+
+Use Ruby modules instead to extend your worlds. See the Cucumber::Glue::Dsl#World RDoc
+or http://wiki.github.com/cucumber/cucumber/a-whole-new-world.
+
+ (Cucumber::Glue::MultipleWorld)
+/Users/Krista/.rvm/gems/ruby-2.3.0/gems/cucumber-3.1.0/lib/cucumber/glue/registry_and_more.rb:90:in `build_rb_world_factory'
+/Users/Krista/.rvm/gems/ruby-2.3.0/gems/cucumber-3.1.0/lib/cucumber/glue/dsl.rb:18:in `build_rb_world_factory'
+/Users/Krista/.rvm/gems/ruby-2.3.0/gems/cucumber-3.1.0/lib/cucumber/glue/dsl.rb:59:in `World'
+/Users/Krista/repos/AutoGrader-Induction/features/support/paths.rb:16:in `<top (required)>'
+/Users/Krista/.rvm/gems/ruby-2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:268:in `load'
+/Users/Krista/.rvm/gems/ruby-2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:268:in `block in load'
+/Users/Krista/.rvm/gems/ruby-2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:240:in `load_dependency'
+/Users/Krista/.rvm/gems/ruby-2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:268:in `load'
+/Users/Krista/.rvm/gems/ruby-2.3.0/gems/cucumber-3.1.0/lib/cucumber/glue/registry_and_more.rb:106:in `load_code_file'
+/Users/Krista/.rvm/gems/ruby-2.3.0/gems/cucumber-3.1.0/lib/cucumber/runtime/support_code.rb:147:in `load_file'
+/Users/Krista/.rvm/gems/ruby-2.3.0/gems/cucumber-3.1.0/lib/cucumber/runtime/support_code.rb:88:in `block in load_files!'
+/Users/Krista/.rvm/gems/ruby-2.3.0/gems/cucumber-3.1.0/lib/cucumber/runtime/support_code.rb:87:in `each'
+/Users/Krista/.rvm/gems/ruby-2.3.0/gems/cucumber-3.1.0/lib/cucumber/runtime/support_code.rb:87:in `load_files!'
+/Users/Krista/.rvm/gems/ruby-2.3.0/gems/cucumber-3.1.0/lib/cucumber/runtime.rb:270:in `load_step_definitions'
+/Users/Krista/.rvm/gems/ruby-2.3.0/gems/cucumber-3.1.0/lib/cucumber/runtime.rb:67:in `run!'
+/Users/Krista/.rvm/gems/ruby-2.3.0/gems/cucumber-3.1.0/lib/cucumber/cli/main.rb:33:in `execute!'
+/Users/Krista/.rvm/gems/ruby-2.3.0/gems/cucumber-3.1.0/bin/cucumber:9:in `<top (required)>'
+/Users/Krista/.rvm/gems/ruby-2.3.0/bin/cucumber:23:in `load'
+/Users/Krista/.rvm/gems/ruby-2.3.0/bin/cucumber:23:in `<main>'
+/Users/Krista/.rvm/gems/ruby-2.3.0/bin/ruby_executable_hooks:15:in `eval'
+/Users/Krista/.rvm/gems/ruby-2.3.0/bin/ruby_executable_hooks:15:in `<main>'
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ vim cucumber-rails-1.5.0/lib/cucumber/rails/world.rb
+[?2004h[?1049h[?1h=[?2004h[1;43r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[43;1H"cucumber-rails-1.5.0/lib/cucumber/rails/world.rb" [New DIRECTORY][2;1H▽[6n[2;1H  [1;1H[>c]11;?[2;1H[94m~                                                                                                                      [3;1H~                                                                                                                      [4;1H~                                                                                                                      [5;1H~                                                                                                                      [6;1H~                                                                                                                      [7;1H~                                                                                                                      [8;1H~                                                                                                                      [9;1H~                                                                                                                      [10;1H~                                                                                                                      [11;1H~                                                                                                                      [12;1H~                                                                                                                      [13;1H~                                                                                                                      [14;1H~                                                                                                                      [15;1H~                                                                                                                      [16;1H~                                                                                                                      [17;1H~                                                                                                                      [18;1H~                                                                                                                      [19;1H~                                                                                                                      [20;1H~                                                                                                                      [21;1H~                                                                                                                      [22;1H~                                                                                                                      [23;1H~                                                                                                                      [24;1H~                                                                                                                      [25;1H~                                                                                                                      [26;1H~                                                                                                                      [27;1H~                                                                                                                      [28;1H~                                                                                                                      [29;1H~                                                                                                                      [30;1H~                                                                                                                      [31;1H~                                                                                                                      [32;1H~                                                                                                                      [33;1H~                                                                                                                      [34;1H~                                                                                                                      [35;1H~                                                                                                                      [36;1H~                                                                                                                      [37;1H~                                                                                                                      [38;1H~                                                                                                                      [39;1H~                                                                                                                      [40;1H~                                                                                                                      [41;1H~                                                                                                                      [42;1H~                                                                                                                      [1;1H[?12l[?25h[?25l[m[43;1H[K[43;1H:[?2004h[?12l[?25hq![?25l[?2004l[43;1H[K[43;1H[?2004l[?1l>[?12l[?25h[?1049lbash-3.2$ cd ~
+bash-3.2$ find -name "cucumber-rails-1.5.0"*"
+find: illegal option -- n
+usage: find [-H | -L | -P] [-EXdsx] [-f path] path ... [expression]
+       find [-H | -L | -P] [-EXdsx] -f path [path ...] [expression]
+bash-3.2$ find -name "cucumber-rails-1.5.0*"[C
