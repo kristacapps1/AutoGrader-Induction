@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
+
   resources :assignments
 
-=======
+
   resources :widgets
->>>>>>> 07f12654840dec031f9f5e4fde47109bf7b13604
+
   devise_for :users, controllers: { 
     omniauth_callbacks: 'omniauth_callbacks', sessions: "sessions" }
     
