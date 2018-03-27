@@ -16,11 +16,11 @@ class PagesController < ApplicationController
   end
   
   def grader_student_solution
-    @assignment = Assignment.all
+    @assignments = Assignment.all
   end
   
   def student_input_and_solution
-     @assignment = Assignment.all
+     @assignments = Assignment.all
   end
   
   def new_assignment

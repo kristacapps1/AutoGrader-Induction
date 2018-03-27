@@ -11,8 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20180325185413) do
+ActiveRecord::Schema.define(version: 20180325190531) do
 
   create_table "assignments", force: :cascade do |t|
     t.string   "title"
@@ -28,9 +27,6 @@ ActiveRecord::Schema.define(version: 20180325185413) do
   end
 
   add_index "assignments", ["user_id"], name: "index_assignments_on_user_id"
-=======
-ActiveRecord::Schema.define(version: 20180325190531) do
->>>>>>> 07f12654840dec031f9f5e4fde47109bf7b13604
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
