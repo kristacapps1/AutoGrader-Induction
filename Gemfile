@@ -34,6 +34,7 @@ group :test, :development do
   gem 'cucumber-rails', :require => false
   gem 'webrat', :require => false
   gem 'rspec-rails'
+  gem 'simplecov', require: false, group: :test
   # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
 end
