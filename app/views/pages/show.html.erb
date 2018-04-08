@@ -55,7 +55,7 @@
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
             <h1 class="h2"> Student: <%= @users.first_name + " " + @users.last_name%> </h1>
           </div>
-          <% if @users.assignments %>
+          <% if @users.assignments[@n] %>
             <center><h2 class="h2">Grade:  <%= @users.assignments[@n]["grade"] %> </h2></center>
             <% end %>
             <center> <p> <%= link_to "edit" , edit_page_path(@users) %></p></center>
