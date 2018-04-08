@@ -16,13 +16,23 @@ class UsersController < ApplicationController
         end
     end
     
+    def update_assignments
+        @users = User.all
+        @users.each  do |user|
+        @assignment_array = user.assignments
+        @assignment_array.push({ "title" => Assignment.last.title, "grade" => 0, "solution" => " " })
+        user.update( assignments: @assignment_array)
+        
+    end
+    redirect_to grader_dashboard_path
+    end
     
     
     private
     
     def user_params
         # NOTE: Using `strong_parameters` gem
-        params.require(:user).permit(:tamu_uin, :class_section)
+        params.require(:user).permit(:tamu_uin, :class_section, :assignments, :tgrade)
         
     end
     

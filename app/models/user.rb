@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_many :assignments, dependent: :destroy
+  serialize :assignments, Array
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -23,9 +23,10 @@ class User < ActiveRecord::Base
         user.last_name = auth.info.last_name
       end
     end
-    
-    
      
+    
+     $tassignment = 0
+     $cuser = 0
     
 
     

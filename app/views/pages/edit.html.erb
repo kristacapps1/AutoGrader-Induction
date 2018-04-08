@@ -1,0 +1,15 @@
+<h1>Users#edit</h1>
+
+<%= form_for(@user, :url => { :action => "update" } ) do |f| %>
+
+    
+   
+    <%= f.label :tgrade %> <br>
+    <%= f.text_field :tgrade%> <br>
+    
+    
+   
+    <br>
+      <%= f.submit "Update Info"%>
+
+<% end %>

@@ -18,35 +18,32 @@ ActiveRecord::Schema.define(version: 20180325190531) do
     t.text     "problem"
     t.string   "due_date"
     t.integer  "possible_grade"
-    t.integer  "actual_grade"
     t.text     "solution"
-    t.text     "student_solution"
-    t.integer  "user_id"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
-  add_index "assignments", ["user_id"], name: "index_assignments_on_user_id"
-
   create_table "users", force: :cascade do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "provider",               default: "", null: false
-    t.string   "first_name",             default: "", null: false
-    t.string   "last_name",              default: "", null: false
-    t.string   "uid",                    default: "", null: false
-    t.string   "tamu_uin",               default: "", null: false
-    t.string   "class_section",          default: "", null: false
+    t.string   "email",                  default: "",         null: false
+    t.string   "encrypted_password",     default: "",         null: false
+    t.string   "provider",               default: "",         null: false
+    t.string   "first_name",             default: "",         null: false
+    t.string   "last_name",              default: "",         null: false
+    t.string   "uid",                    default: "",         null: false
+    t.string   "tamu_uin",               default: "",         null: false
+    t.string   "class_section",          default: "",         null: false
+    t.string   "tgrade",                 default: "",         null: false
+    t.text     "assignments",            default: "--- []\n"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,          null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.datetime "created_at",                                  null: false
+    t.datetime "updated_at",                                  null: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
