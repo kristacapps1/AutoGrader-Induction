@@ -21,8 +21,6 @@ class PagesController < ApplicationController
     id = params[:id]
     @users = User.find(id)
     $cuser = id.to_i
-    
-    
    end
    
    def edit 
