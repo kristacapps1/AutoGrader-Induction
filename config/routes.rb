@@ -14,12 +14,18 @@ Rails.application.routes.draw do
   get 'grader_student_solution', to: 'users#grader_student_solution'
   get 'student_input_and_solution', to: 'pages#student_input_and_solution'
   get 'update_assignments', to: 'users#update_assignments'
+   get 'admin_edit_users', to: 'users#admin_edit_users'
   
   
   match 'assignments/:id/count' => 'assignments#count', :via => [:get], as: :assignments_count
   
 resources :pages
   resource :user, only: [:edit] do
+    collection do
+      patch 'update_user'
+    end
+  end
+  resource :user, only: [:admin_edit_users] do
     collection do
       patch 'update_user'
     end

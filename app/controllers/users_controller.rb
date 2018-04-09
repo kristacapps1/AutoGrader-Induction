@@ -6,6 +6,10 @@ class UsersController < ApplicationController
         @user = current_user
     end
     
+    def admin_edit_users
+        @users = User.all
+    end
+    
     
     def update_user
         @user = current_user
