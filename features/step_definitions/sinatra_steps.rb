@@ -26,6 +26,6 @@ When (/^I click "([^"]*)"$/) do |element|
   click_on element
 end
 
-#When /^I select "" from "" $/ do |list, selection| 
-  #ruby code
-#end
+When (/^I select "([^"]*)" from "(^"]*)"$/) do |list, selection| 
+  select(selection, :from => list)
+end
