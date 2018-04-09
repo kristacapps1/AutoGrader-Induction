@@ -3,6 +3,10 @@ class PagesController < ApplicationController
   
   before_filter :require_uin_class, :except=>[:index]
   
+  before_filter :is_student, :only=>[:student_input_and_solution]
+  
+  before_filter :is_grader, :only=>[:grader_dashboard]
+
   
   def index
     if(current_user)
@@ -31,13 +35,13 @@ class PagesController < ApplicationController
      
    end
    
-    def update
+  def update
     @user = User.find params[:id]
     @user.update(user_params)
     @user.assignments[$tassignment]["grade"] = @user.tgrade
     @user.update( assignments: @user.assignments)
     redirect_to page_path(@user)
-    end
+  end
   
   def student_input_and_solution
      @assignments = Assignment.all
