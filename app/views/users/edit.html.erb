@@ -10,6 +10,13 @@
         <%= f.select :class_section, ["501", "502", "503"],:prompt => 'Select One' , :autocomplete => "class_section", :required => true  %>
 
       </div>
+      
+      <div class="field">
+        <%= f.label :premission, "Premission" %><br />
+        <%= f.select :premission, ["student", "grader", "admin"],:prompt => 'Select One' , :autocomplete => "premission", :required => true  %>
+
+      </div>
+      
       <div class="action_container">
         <%= f.submit %>
       </div>

@@ -9,7 +9,19 @@ class ApplicationController < ActionController::Base
   before_filter :require_login
 
   private
-  
+    
+    def is_student
+      if current_user.premission != "student" && current_user.premission != "admin"
+        redirect_to grader_dashboard_path
+      end
+    end
+    
+    def is_grader
+      if current_user.premission != "grader" && current_user.premission != "admin"
+        redirect_to student_input_and_solution_path
+      end
+    end
+    
     def require_login
       if not current_user
         redirect_to root_path
