@@ -40,6 +40,10 @@ class AssignmentsController < ApplicationController
     @assignment = Assignment.all
   end 
   
+    class << self
+        attr_accessor :assignment
+        attr_accessor :user
+    end
 
   
   

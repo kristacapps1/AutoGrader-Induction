@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
     before_action :authenticate_user!
     
-    
     def edit
         @user = current_user
     end
@@ -9,7 +8,6 @@ class UsersController < ApplicationController
     def admin_edit_users
         @users = User.all
     end
-    
     
     def update_user
         @user = User.find(params[:id])
@@ -31,7 +29,11 @@ class UsersController < ApplicationController
         redirect_to grader_dashboard_path
     end
     
-    
+    class << self
+        attr_accessor :users
+        attr_accessor :user
+        attr_accessor :assignment_array
+    end
     private
     
     def user_params
