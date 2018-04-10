@@ -25,7 +25,7 @@ class UsersController < ApplicationController
            # @assignment_array.push({ "title" => Assignment.last.title, "grade" => 0, "solution" => " " })
           #  user.update_attributes( assignments: @assignment_array)
             user.assignments = user.assignments + [{ "title" => Assignment.last.title, "grade" => 0, "solution" => " " }]
-            user.assignments_will_change!
+           # user.assignments_will_change!
             user.save
         end
         redirect_to grader_dashboard_path
