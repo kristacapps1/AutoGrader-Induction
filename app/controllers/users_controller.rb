@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
     before_action :authenticate_user!
     
-    
     def edit
         @user = current_user
     end
@@ -10,12 +9,11 @@ class UsersController < ApplicationController
         @users = User.all
     end
     
-    
     def update_user
-        @user = current_user
+        @user = User.find(params[:id])
         if @user.update(user_params)
           # Sign in the user by passing validation in case their password changed
-          bypass_sign_in @user, scope: :user
+          #bypass_sign_in @user, scope: :user
           redirect_to grader_dashboard_path
         end
     end
@@ -31,7 +29,11 @@ class UsersController < ApplicationController
         redirect_to grader_dashboard_path
     end
     
-    
+    class << self
+        attr_accessor :users
+        attr_accessor :user
+        attr_accessor :assignment_array
+    end
     private
     
     def user_params
