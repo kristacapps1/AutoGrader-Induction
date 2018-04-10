@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   
   before_filter :is_student, :only=>[:student_input_and_solution]
   
-  before_filter :is_grader, :only=>[:grader_dashboard]
+  before_filter :is_grader, :only=>[:grader_dashboard, :show]
 
   
   def index

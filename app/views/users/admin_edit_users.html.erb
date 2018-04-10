@@ -5,7 +5,7 @@
     <div >
       <% if @users %>
         <% @users.each do |user| %>
-          <%= form_for(user, :url => { :action => "update_user" }, :html => {:class => 'permission_edit'} ) do |f|%>
+          <%= form_for(user, :url => { :action => "update_user",  params: {id: user.id}}, :html => {:class => 'permission_edit'} ) do |f|%>
             <div>
               <%= user.first_name + " " + user.last_name %>
             </div>
@@ -17,6 +17,7 @@
             </div>
             
             <div class="action_container">
+              <%= link_to "Edit", edit_user_path(user) %>
               <%= f.submit %>
             </div>
           <% end %>

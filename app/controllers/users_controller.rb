@@ -12,10 +12,10 @@ class UsersController < ApplicationController
     
     
     def update_user
-        @user = current_user
+        @user = User.find(params[:id])
         if @user.update(user_params)
           # Sign in the user by passing validation in case their password changed
-          bypass_sign_in @user, scope: :user
+          #bypass_sign_in @user, scope: :user
           redirect_to grader_dashboard_path
         end
     end
