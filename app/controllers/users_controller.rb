@@ -1,11 +1,9 @@
 class UsersController < ApplicationController
     before_action :authenticate_user!
     
-    
     def edit
         @user = current_user
     end
-    
     
     def update_user
         @user = current_user
@@ -27,7 +25,11 @@ class UsersController < ApplicationController
     redirect_to grader_dashboard_path
     end
     
-    
+    class << self
+        attr_accessor :users
+        attr_accessor :user
+        attr_accessor :assignment_array
+    end
     private
     
     def user_params

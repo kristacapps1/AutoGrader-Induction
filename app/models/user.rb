@@ -27,13 +27,9 @@ class User < ActiveRecord::Base
     
      $tassignment = 0
      $cuser = 0
-    
 
-    
-    
-    
-    
-
-    
+    class << self
+        attr_accessor :assignments
+    end
   
 end
