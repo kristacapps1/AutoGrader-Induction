@@ -6,6 +6,10 @@ class UsersController < ApplicationController
         @user = current_user
     end
     
+    #Assign grades per assignment
+    def assignment_grades
+        #For each assignmnet assign grade to user
+    end    
     
     def update_user
         @user = current_user
