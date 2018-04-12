@@ -9,4 +9,11 @@ RSpec.describe User, type: :model do
             end
         end
     end
+    describe "check email" do
+        context "given new user logged in" do
+            it "has an email" do
+                expect(User.new().email).to eql(auth.info.email)
+            end
+        end
+    end
 end

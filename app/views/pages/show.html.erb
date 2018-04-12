@@ -38,11 +38,11 @@
               </a>
             </h6>
             <ul class="nav flex-column mb-2">
-               <% @assignment.each do |assignment| %>
+              <% @assignments.each do |assignment| %>
               <li class="nav-item">
                 <a class="nav-link" href="#">
-                  <span data-feather="file-text"></span>
-                  <%= assignment.title %>
+                  <span data-feather="file-text">
+                  <%= link_to assignment.title, assignments_count_path(:id => assignment.id) %>
                 </a>
               </li>
                 <% end %>
@@ -53,9 +53,12 @@
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-            <h1 class="h2">Student's Name Here</h1>
+            <h1 class="h2"> Student: <%= @users.first_name + " " + @users.last_name%> </h1>
           </div>
-            <center><h2 class="h2">Student's Grade On Assignment</h2></center>
+          <% if @users.assignments[@n] %>
+            <center><h2 class="h2">Grade:  <%= @users.assignments[@n]["grade"] %> </h2></center>
+            <% end %>
+            <center> <p> <%= link_to "edit" , edit_page_path(@users) %></p></center>
             
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
                 <div class="jumbotron" style="width:48%">

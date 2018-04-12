@@ -1,0 +1,30 @@
+
+
+<html>
+    
+    <div >
+      <% if @users %>
+        <% @users.each do |user| %>
+          <%= form_for(user, :url => { :action => "update_user",  params: {id: user.id}}, :html => {:class => 'permission_edit'} ) do |f|%>
+            <div>
+              <%= user.first_name + " " + user.last_name %>
+            </div>
+            
+           
+            
+            <div class="field">
+              <%= f.select :premission, ["student", "grader", "admin"],:prompt => 'Select One' , :autocomplete => "premission", :required => true  %>
+            </div>
+            
+            <div class="action_container">
+              <%= f.submit %>
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
+    <div>
+    
+    
+</html>
+
+

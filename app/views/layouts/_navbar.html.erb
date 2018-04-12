@@ -8,21 +8,30 @@
       <%= link_to "Welcome, " + current_user.first_name, root_path, class: "navbar-brand col-sm-3 col-md-2 mr-0" %>
     
   </a>
-
+  <% if current_user.premission == "grader" || current_user.premission == "admin"  %>
+    <a>
+      <%= link_to "Grader", grader_dashboard_path, class: "navbar-brand col-sm-3 col-md-1 mr-0" %>
+    </a>
+  <% end %>
+  
+  <% if current_user.premission == "student" || current_user.premission == "admin"  %>
+    <a>
+      <%= link_to "Student", student_input_and_solution_path, class: "navbar-brand col-sm-1 col-md-1 mr-0" %>
+    </a>
+  <% end %>
+  
   <a>
-    <%= link_to "Grader", grader_dashboard_path, class: "navbar-brand col-sm-3 col-md-1 mr-0" %>
-  </a>
-  <a>
-    <%= link_to "Grader's Students", grader_student_solution_path, class: "navbar-brand col-sm-3 col-md-1 mr-0" %>
-  </a>
-  <a>
-    <%= link_to "Student", student_input_and_solution_path, class: "navbar-brand col-sm-1 col-md-1 mr-0" %>
-  </a>
-   <a>
     <%= link_to "Update", edit_user_path, class: "navbar-brand col-sm-1 col-md-1 mr-0" %>
   </a>
   
-  <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+  <% if current_user.premission == "admin" %>
+    <a>
+      <%= link_to "Permissions", admin_edit_users_path, class: "navbar-brand col-sm-3 col-md-1 mr-0" %>
+    </a>
+  <% end %>
+  
+  <div class="form-control form-control-dark w-100" style="height: 100%">
+  </div>
   <ul class="navbar-nav px-3">
     <li class="nav-item text-nowrap">
       <a>
