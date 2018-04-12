@@ -1,13 +1,12 @@
-<!DOCTYPE HTML>
-
-
 <html>
-	<head>
-		<h1>My First Web Page</h1>
-		<p> Unchanged </p>
-		
-		<p id="demo"></p>
-		<script src="trial.js"></script>
-		
-	</head>
+
+<button onclick="poptastic('https://45c67f4cf80f4dc7bc2a9badfa204987.vfs.cloud9.us-east-2.amazonaws.com/')">Sin(X)</button>
+<script>
+  var newwindow;
+  function poptastic(url)
+  {
+    newwindow=window.open(url,'Sin(x)','height=800,width=600');
+    if (window.focus) {newwindow.focus()}
+  }
+</script>
 </html>
