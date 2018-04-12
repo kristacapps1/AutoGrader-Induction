@@ -1,3 +1,9 @@
+Given ("I am signed in with provider google") do 
+	visit "/users/auth/google_oauth2"
+	
+	#https://autograder-induction.herokuapp.com/users/auth/google_oauth2
+end
+
 Given("I am on the grader dashboard page") do
     visit "/grader_dashboard"
 end
