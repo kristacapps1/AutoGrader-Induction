@@ -1,20 +1,26 @@
 <html>
+  <head>
+     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <center><div style=" width:25%">
+    <h2>Please update your information</h2>
     <%= form_for(@user, :url => { :action => "update_user",  params: {id: @user.id} } ) do |f| %>
       <div class="field">
         <%= f.label :tamu_uin, "UIN" %><br />
-        <%= f.text_field :tamu_uin, :autocomplete => "tamu_uin", presence: true, :required => true   %>
+        <%= f.text_field :tamu_uin, :autocomplete => "tamu_uin", presence: true, :required => true, class: "form-control"  %>
       </div>
-
-      <div class="field">
+      <br>
+      <div class="field" >
         <%= f.label :class_section, "Class Section" %><br />
-        <%= f.select :class_section, ["501", "502", "503"],:prompt => 'Select One' , :autocomplete => "class_section", :required => true  %>
+        <%= f.select :class_section, ["501", "502", "503"],:prompt => 'Select One' , :autocomplete => "class_section", :required => true, class: "form-control"  %>
 
       </div>
-      
+      <br>
       <div class="action_container">
-        <%= f.submit %>
+        <%= f.submit class: "btn btn-default" %>
       </div>
     <% end %>
+    </div></center>
 </html>
 
 

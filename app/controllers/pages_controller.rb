@@ -17,6 +17,7 @@ class PagesController < ApplicationController
   def grader_dashboard
     @sections = Assignment.sections
     @users = User.all
+    @grades = Assignment.grades
   end
   
    def show
