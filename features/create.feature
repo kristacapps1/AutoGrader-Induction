@@ -4,6 +4,7 @@ Feature: Create class and Assignment
   I want to be able to add a class or new assignment
   
   Scenario: Find New Class
+	Given I am signed in with provider google
     Given I am on the grader dashboard page
     Then I should see "Create a New Class" in a link
     
@@ -23,3 +24,7 @@ Feature: Create class and Assignment
     And I fill in "Title" with "Homework 1"
     And I click "Create"
     Then I should see "Assigment created"
+
+	
+	
+	
