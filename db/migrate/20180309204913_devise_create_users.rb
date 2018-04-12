@@ -16,7 +16,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :tamu_uin, null: false, default: ""
       t.string :class_section, null: false, default: ""
       t.string :tgrade, null: false, default: ""
-      t.text :assignments, array: true, default: []
+      t.text :assignments, null: false, array: true, default: []
       
       
       

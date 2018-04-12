@@ -5,4 +5,5 @@ class Assignment < ActiveRecord::Base
     def self.sections
         @@sections
     end
+
 end

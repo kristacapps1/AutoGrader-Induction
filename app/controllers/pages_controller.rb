@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   
   before_filter :is_student, :only=>[:student_input_and_solution]
   
-  before_filter :is_grader, :only=>[:grader_dashboard]
+  before_filter :is_grader, :only=>[:grader_dashboard, :show]
 
   
   def index
@@ -25,8 +25,6 @@ class PagesController < ApplicationController
     id = params[:id]
     @users = User.find(id)
     $cuser = id.to_i
-    
-    
    end
    
    def edit 

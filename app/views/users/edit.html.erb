@@ -1,5 +1,5 @@
 <html>
-    <%= form_for(@user, :url => { :action => "update_user" } ) do |f| %>
+    <%= form_for(@user, :url => { :action => "update_user",  params: {id: @user.id} } ) do |f| %>
       <div class="field">
         <%= f.label :tamu_uin, "UIN" %><br />
         <%= f.text_field :tamu_uin, :autocomplete => "tamu_uin", presence: true, :required => true   %>
@@ -8,12 +8,6 @@
       <div class="field">
         <%= f.label :class_section, "Class Section" %><br />
         <%= f.select :class_section, ["501", "502", "503"],:prompt => 'Select One' , :autocomplete => "class_section", :required => true  %>
-
-      </div>
-      
-      <div class="field">
-        <%= f.label :premission, "Premission" %><br />
-        <%= f.select :premission, ["student", "grader", "admin"],:prompt => 'Select One' , :autocomplete => "premission", :required => true  %>
 
       </div>
       
