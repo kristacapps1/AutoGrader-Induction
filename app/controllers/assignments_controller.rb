@@ -33,7 +33,12 @@ class AssignmentsController < ApplicationController
    end
   
   def show 
-    redirect_to grader_dashboard_path
+     @assignments = Assignment.all
+     id = params[:id]
+    if !id
+      id = "1"
+    end
+     @assignment = Assignment.find(id)
   end
   
   def assignments

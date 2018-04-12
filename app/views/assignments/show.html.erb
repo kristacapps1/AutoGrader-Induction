@@ -42,7 +42,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   <span data-feather="file-text"></span>
-                  <%= assignment.title %>
+                  <%= link_to assignment.title , assignment_path(assignment) %>
                 </a>
               </li>
                 <% end %>
@@ -53,9 +53,9 @@
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-            <h1 class="h2">Assignment Name</h1>
+            <h1 class="h2"><%= @assignment.title %></h1>
           </div>
-            <center><h2 class="h2">Submit Proof</h2></center>
+            <center><h2 class="h2"><%= @assignment.problem %></h2></center>
             
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
                 <div class="jumbotron" style="width:48%">

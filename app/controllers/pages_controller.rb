@@ -42,9 +42,6 @@ class PagesController < ApplicationController
     redirect_to page_path(@user)
   end
   
-  def student_input_and_solution
-     @assignments = Assignment.all
-  end
   
   def new_assignment
      User.add_section

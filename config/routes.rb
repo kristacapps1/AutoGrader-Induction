@@ -12,7 +12,7 @@ Rails.application.routes.draw do
  
   get 'grader_dashboard', to: 'pages#grader_dashboard'
   get 'grader_student_solution', to: 'users#grader_student_solution'
-  get 'student_input_and_solution', to: 'pages#student_input_and_solution'
+  get 'student_input_and_solution', to: 'assignments#show'
   get 'update_assignments', to: 'users#update_assignments'
    get 'admin_edit_users', to: 'users#admin_edit_users'
   
@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   match 'assignments/:id/count' => 'assignments#count', :via => [:get], as: :assignments_count
   
 resources :pages
+resources :assignments
   resource :user, only: [:edit] do
     collection do
       patch 'update_user'
