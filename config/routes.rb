@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get 'student_input_and_solution', to: 'assignments#show'
   get 'update_assignments', to: 'users#update_assignments'
    get 'admin_edit_users', to: 'users#admin_edit_users'
+   get 'compare', to: 'assignments#compare'
   
   
   match 'assignments/:id/count' => 'assignments#count', :via => [:get], as: :assignments_count
@@ -34,6 +35,11 @@ resources :assignments
   resource :pages, only: [:edit] do
     collection do
       patch 'update'
+    end
+  end
+  resource :assignments, only: [:show] do
+    collection do
+      patch 'update_ans'
     end
   end
   resources :pages do

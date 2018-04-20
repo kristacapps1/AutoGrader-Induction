@@ -53,16 +53,39 @@
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-            <h1 class="h2"><%= @assignment.title %></h1>
+            
+            <h1 class="h2">
+              <% if @assignment %>
+              <%= @assignment.title %>
+              <% else %>
+              <%= "No Assignments Yet!" %>
+              <% end %>
+              </h1>
           </div>
-            <center><h2 class="h2"><%= @assignment.problem %></h2></center>
+            <center><h2 class="h2">
+              <% if @assignment %>
+              <%= @assignment.problem %>
+              <% end %>
+              </h2></center>
             
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
                 <div class="jumbotron" style="width:48%">
-                    <center><h3 class="h2"><input id="input-b1" name="input-b1" type="file" class="file"></h3></center>
+                   
                     <p class="lead">This is where the student's solution will go</p>
-                    <hr class="my-4">
-					<p class="h3"><input type="submit" value="Submit Solution">
+                   <%= form_for(@user, :url => { :action => "update_ans" } ) do |f| %>
+
+                    <%= f.label "Basis" %> <br>
+                    <%= f.text_area :tbasis, class: "form-control" %> <br>
+                     <br>
+                    <%= f.label "Induction Hypothesis" %> <br>
+                    <%= f.text_area :tinduction, class: "form-control" %> <br>
+                    <br>
+                    <%= f.label "Proof" %> <br>
+                    <%= f.text_area :tproof, class: "form-control" %> <br>
+                    <br>
+                    <%= f.submit "Submit Proof", class: "btn btn-default" %>
+
+                    <% end %>
                     
                 </div>
                 

@@ -27,6 +27,9 @@ ActiveRecord::Schema.define(version: 20180325190531) do
     t.string   "email",                  default: "",         null: false
     t.string   "encrypted_password",     default: "",         null: false
     t.string   "premission",             default: "",         null: false
+    t.string   "tbasis",                 default: "",         null: false
+    t.string   "tinduction",             default: "",         null: false
+    t.string   "tproof",                 default: "",         null: false
     t.string   "provider",               default: "",         null: false
     t.string   "first_name",             default: "",         null: false
     t.string   "last_name",              default: "",         null: false
@@ -34,6 +37,7 @@ ActiveRecord::Schema.define(version: 20180325190531) do
     t.string   "tamu_uin",               default: "",         null: false
     t.string   "class_section",          default: "",         null: false
     t.string   "tgrade",                 default: "",         null: false
+    t.string   "grade",                  default: "",         null: false
     t.text     "assignments",            default: "--- []\n", null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"

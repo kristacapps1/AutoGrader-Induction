@@ -24,7 +24,7 @@ class UsersController < ApplicationController
             @assignment_array = user.assignments 
            # @assignment_array.push({ "title" => Assignment.last.title, "grade" => 0, "solution" => " " })
           #  user.update_attributes( assignments: @assignment_array)
-            user.assignments = user.assignments + [{ "title" => Assignment.last.title, "grade" => 0, "solution" => " " }]
+            user.assignments = user.assignments + [{ "title" => Assignment.last.title, "grade" => 0, "basis" => " ", "induction" => " ", "proof" => " " }]
            # user.assignments_will_change!
             user.save
         end
@@ -40,7 +40,7 @@ class UsersController < ApplicationController
     
     def user_params
         # NOTE: Using `strong_parameters` gem
-        params.require(:user).permit(:tamu_uin, :class_section, :assignments, :tgrade, :premission)
+        params.require(:user).permit(:tamu_uin, :class_section, :assignments, :tgrade, :premission, :tbasis, :tinduction, :tproof)
         
     end
     

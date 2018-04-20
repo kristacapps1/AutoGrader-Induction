@@ -26,19 +26,47 @@ class AssignmentsController < ApplicationController
   end
   
    def update
-    @user = User.find params[:id]
-    @user.update_attributes!(user_params)
-    
-    redirect_to grader_dashboard_path
+    @user = current_user
+    @user.update(user_params)
+    redirect_to compare_path
    end
+   
+   def update_ans
+       user = current_user
+       user.update!(user_params)
+       redirect_to compare_path
+   end
+   
+   def compare
+       
+       @user = current_user
+       @user.assignments[$tassign.to_i]["basis"] = @user.tbasis
+       @user.assignments[$tassign.to_i]["induction"] = @user.tinduction
+       @user.assignments[$tassign.to_i]["proof"] = @user.tproof
+       @user.update!(assignments: @user.assignments)
+       
+      
+       @user.update(tbasis: " ")
+       @user.update(tinduction: " ")
+       @user.update(tproof: " ")
+      
+       
+       redirect_to assignment_path($tassign.to_i + 1)
+   end
+    
   
   def show 
      @assignments = Assignment.all
+     @user = User.first
      id = params[:id]
     if !id
       id = "1"
     end
+    if Assignment.count != 0
      @assignment = Assignment.find(id)
+     $tassign = (id.to_i - 1)
+    end 
+    
   end
   
   def assignments
@@ -60,7 +88,7 @@ class AssignmentsController < ApplicationController
   
   def user_params
         # NOTE: Using `strong_parameters` gem
-        params.permit(:tamu_uin, :class_section, :assignments)
+        params.require(:user).permit(:tamu_uin, :class_section, :assignments, :tbasis, :tinduction, :tproof)
   end
   
 end
