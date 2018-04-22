@@ -10,14 +10,17 @@ RSpec.describe ApplicationController, type: :controller do
     describe "require_login" do
         context "given i am not logged in" do
             it "redirects to root path" do
-                expect(request.fullpath).to eq(root_path)
+                #@appctrl.require_login
+                expect(request.fullpath + '/').to eq(root_path)
             end
         end
     end
     
     describe "require_uin_class" do
         it "checks that without uin go to edit user path" do
+            @appctrl1  = ApplicationController.new()
             @user.update({:tamu_uin=>:class_section})
+            #@appctrl.require_uin_class
             expect(request.fullpath).to eq(edit_user_path)
         end
     end
