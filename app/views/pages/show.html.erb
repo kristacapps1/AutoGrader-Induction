@@ -55,9 +55,23 @@
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
             <h1 class="h2"> Student: <%= @users.first_name + " " + @users.last_name%> </h1>
           </div>
-          <% if @users.assignments[@n] %>
-            <center><h2 class="h2">Grade:  <%= @users.assignments[@n]["grade"] %> </h2></center>
+          
+            <center><h2 class="h2">Grade:  
+            <% if $tassignment == "1" %>
+            <%= @users.a1grade %>
+            <% elsif $tassignment == "2" %>
+            <%= @users.a2grade %>
+            <% elsif $tassignment == "3" %>
+            <%= @users.a3grade %>
+            <% elsif $tassignment == "4" %>
+            <%= @users.a4grade %>
+            <% elsif $tassignment == "5" %>
+            <%= @users.a5grade %>
+            
             <% end %>
+            
+            </h2></center>
+            
             <center> <p> <%= link_to "edit" , edit_page_path(@users) %></p></center>
             
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">

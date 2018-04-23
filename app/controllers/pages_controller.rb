@@ -37,8 +37,29 @@ class PagesController < ApplicationController
   def update
     @user = User.find params[:id]
     @user.update(user_params)
-    @user.assignments[$tassignment]["grade"] = @user.tgrade
-    @user.update( assignments: @user.assignments)
+    
+      if $tassignment == "1"
+         @user.a1grade = @user.tgrade
+         
+         
+      elsif $tassignment == "2"
+         @user.a2grade = @user.tgrade
+         
+      
+      elsif $tassignment == "3"
+         @user.a3grade = @user.tgrade
+         
+    
+      elsif $tassignment == "4"
+         @user.a4grade = @user.tgrade
+         
+      elsif $tassignment == "5"
+         @user.a5grade = @user.tgrade
+          
+      
+      end  
+     @user.update(user_params)
+     @user.save
     redirect_to page_path(@user)
   end
   
@@ -49,7 +70,7 @@ class PagesController < ApplicationController
   
   def user_params
         # NOTE: Using `strong_parameters` gem
-        params.require(:user).permit(:tamu_uin, :class_section, :assignments, :tgrade)
+        params.require(:user).permit(:tamu_uin, :class_section, :assignments, :tgrade, :a1grade, :a2grade, :a3grade, :a4grade, :a5grade)
   end
   
   

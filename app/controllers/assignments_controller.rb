@@ -7,7 +7,10 @@ class AssignmentsController < ApplicationController
  
   def count
     @assignment = Assignment.find(params[:id])
-    $tassignment = params[:id].to_i - 1
+    $tassignment = params[:id]
+    if $tassignment == "0"
+        $tassignment = "1"
+    end
     user = User.find($cuser.to_s)
     redirect_to page_path(user)
   end
@@ -39,19 +42,37 @@ class AssignmentsController < ApplicationController
    
    def compare
        
-       @user = current_user
-       @user.assignments[$tassign.to_i]["basis"] = @user.tbasis
-       @user.assignments[$tassign.to_i]["induction"] = @user.tinduction
-       @user.assignments[$tassign.to_i]["proof"] = @user.tproof
-       @user.update!(assignments: @user.assignments)
-       
+       user = current_user
+      if $tassign == "1"
+         user.a1basis = user.tbasis
+         user.a1induction = user.tinduction
+         user.a1proof = user.tproof
+         
+      elsif $tassign == "2"
+         user.a2basis = user.tbasis
+         user.a2induction = user.tinduction
+         user.a2proof = user.tproof
       
-       @user.update(tbasis: " ")
-       @user.update(tinduction: " ")
-       @user.update(tproof: " ")
+      elsif $tassign == "3"
+         user.a3basis = user.tbasis
+         user.a3induction = user.tinduction
+         user.a3proof = user.tproof
+    
+      elsif $tassign == "4"
+         user.a4basis = user.tbasis
+         user.a4induction = user.tinduction
+         user.a4proof = user.tproof
+      elsif $tassign == "5"
+         user.a5basis = user.tbasis
+         user.a5induction = user.tinduction
+         user.a5proof = user.tproof  
       
-       
-       redirect_to assignment_path($tassign.to_i + 1)
+      end  
+        user.tbasis = " "
+        user.tinduction = " "
+        user.tproof = " "
+       user.save
+       redirect_to assignment_path($tassign)
    end
     
   
@@ -59,12 +80,15 @@ class AssignmentsController < ApplicationController
      @assignments = Assignment.all
      @user = User.first
      id = params[:id]
-    if !id
+    if id == "0"
       id = "1"
+    elsif !id
+      id="1"
     end
+    
     if Assignment.count != 0
      @assignment = Assignment.find(id)
-     $tassign = (id.to_i - 1)
+     $tassign = (id)
     end 
     
   end
@@ -88,7 +112,7 @@ class AssignmentsController < ApplicationController
   
   def user_params
         # NOTE: Using `strong_parameters` gem
-        params.require(:user).permit(:tamu_uin, :class_section, :assignments, :tbasis, :tinduction, :tproof)
+        params.require(:user).permit(:tamu_uin, :class_section, :assignments, :tbasis, :tinduction, :tproof, :a1basis, :a1nduction, :a1proof, :a2basis, :a2nduction, :a2proof, :a3basis, :a3nduction, :a3proof, :a4basis, :a4nduction, :a4proof, :a5basis, :a5nduction, :a5proof)
   end
   
 end

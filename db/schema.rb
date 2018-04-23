@@ -27,9 +27,29 @@ ActiveRecord::Schema.define(version: 20180325190531) do
     t.string   "email",                  default: "",         null: false
     t.string   "encrypted_password",     default: "",         null: false
     t.string   "premission",             default: "",         null: false
-    t.string   "tbasis",                 default: "",         null: false
-    t.string   "tinduction",             default: "",         null: false
-    t.string   "tproof",                 default: "",         null: false
+    t.text     "tbasis",                 default: "",         null: false
+    t.text     "tinduction",             default: "",         null: false
+    t.text     "tproof",                 default: "",         null: false
+    t.text     "a1basis",                default: "",         null: false
+    t.text     "a1induction",            default: "",         null: false
+    t.text     "a1proof",                default: "",         null: false
+    t.string   "a1grade",                default: "",         null: false
+    t.text     "a2basis",                default: "",         null: false
+    t.text     "a2induction",            default: "",         null: false
+    t.text     "a2proof",                default: "",         null: false
+    t.string   "a2grade",                default: "",         null: false
+    t.text     "a3basis",                default: "",         null: false
+    t.text     "a3induction",            default: "",         null: false
+    t.text     "a3proof",                default: "",         null: false
+    t.string   "a3grade",                default: "",         null: false
+    t.text     "a4basis",                default: "",         null: false
+    t.text     "a4induction",            default: "",         null: false
+    t.text     "a4proof",                default: "",         null: false
+    t.string   "a4grade",                default: "",         null: false
+    t.text     "a5basis",                default: "",         null: false
+    t.text     "a5duction",              default: "",         null: false
+    t.text     "a5proof",                default: "",         null: false
+    t.string   "a5grade",                default: "",         null: false
     t.string   "provider",               default: "",         null: false
     t.string   "first_name",             default: "",         null: false
     t.string   "last_name",              default: "",         null: false
