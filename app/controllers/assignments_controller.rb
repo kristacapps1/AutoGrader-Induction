@@ -17,7 +17,14 @@ class AssignmentsController < ApplicationController
   
   def create
     @assignment = Assignment.new(assignment_params)
-    
+    require "http"
+    $string = HTTP.get("https://wolfapi.herokuapp.com/1+3+5+...+(2n-1)=n*n\">Q1").to_s
+    $string = $string.slice!(($string.index('Result'))..$string.length)
+    $string = $string.slice!(($string.index("\""))..$string.length)
+    $string[0] = ''
+    $string[$string.length-1] = ''
+    $string[$string.length-1] = ''
+    @assignment.solution = $string
     if @assignment.save
       redirect_to update_assignments_path
     else 
@@ -107,7 +114,7 @@ class AssignmentsController < ApplicationController
   private
   
   def assignment_params
-    params.require(:assignment).permit(:title, :problem, :due_date, :possible_grade)
+    params.require(:assignment).permit(:title, :problem, :due_date, :possible_grade, :solution)
   end
   
   def user_params

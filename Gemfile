@@ -63,6 +63,7 @@ end
 
 group :development do
   gem 'sqlite3'
+  gem 'http'
 end
 
 group :production do

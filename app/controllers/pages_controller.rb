@@ -18,6 +18,27 @@ class PagesController < ApplicationController
     @sections = Assignment.sections
     @users = User.all
     @grades = Assignment.grades
+#    @grades = [0,0,0,0,0]
+#    a = 0
+#    b = 0
+#    c = 0
+#    d = 0
+#    f = 0
+#    @users.each do |x| 
+#        if x.grade.to_i > 90
+#            a = a + 1
+#        elsif x.grade.to_i > 80 && x.grade.to_i < 90
+#            b = b + 1
+#        elsif x.grade.to_i > 70 && x.grade.to_i < 80
+#            c = c + 1
+#        elsif x.grade.to_i > 60 && x.grade.to_i < 70
+#            d = d + 1
+#        else
+#            f = f + 1
+#        end 
+#    end
+#    @grades = [a,b,c,d,f]
+    
   end
   
    def show
