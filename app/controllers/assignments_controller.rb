@@ -48,7 +48,7 @@ class AssignmentsController < ApplicationController
    end
    
    def compare
-       
+       assignment = Assignment.find($tassign)
        user = current_user
       if $tassign == "1"
          user.a1basis = user.tbasis
@@ -75,6 +75,10 @@ class AssignmentsController < ApplicationController
          user.a5proof = user.tproof  
       
       end  
+      
+      #add comparison code here
+      #user.tbasis = users final solution/proof
+      #assignment.solution = api's solution
         user.tbasis = " "
         user.tinduction = " "
         user.tproof = " "
