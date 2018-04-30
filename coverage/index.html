@@ -709,7 +709,7 @@
         <li class="missed" data-hits="0" data-linenumber="32">
           
           
-          <code class="ruby">      if current_user.tamu_uin == &quot;&quot; || current_user.class_section == &quot;&quot;</code>
+          <code class="ruby">      if current_user.encrypted_tamu_uin == &quot;&quot; || current_user.class_section == &quot;&quot;</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="33">
@@ -1448,7 +1448,7 @@
         <li class="missed" data-hits="0" data-linenumber="115">
           
           
-          <code class="ruby">        params.require(:user).permit(:tamu_uin, :class_section, :assignments, :tbasis, :tinduction, :tproof, :a1basis, :a1nduction, :a1proof, :a2basis, :a2nduction, :a2proof, :a3basis, :a3nduction, :a3proof, :a4basis, :a4nduction, :a4proof, :a5basis, :a5nduction, :a5proof)</code>
+          <code class="ruby">        params.require(:user).permit(:encrypted_tamu_uin, :class_section, :assignments, :tbasis, :tinduction, :tproof, :a1basis, :a1nduction, :a1proof, :a2basis, :a2nduction, :a2proof, :a3basis, :a3nduction, :a3proof, :a4basis, :a4nduction, :a4proof, :a5basis, :a5nduction, :a5proof)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="116">
@@ -1923,7 +1923,7 @@
         <li class="missed" data-hits="0" data-linenumber="73">
           
           
-          <code class="ruby">        params.require(:user).permit(:tamu_uin, :class_section, :assignments, :tgrade, :a1grade, :a2grade, :a3grade, :a4grade, :a5grade)</code>
+          <code class="ruby">        params.require(:user).permit(:encrypted_tamu_uin, :class_section, :assignments, :tgrade, :a1grade, :a2grade, :a3grade, :a4grade, :a5grade)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="74">
@@ -2236,7 +2236,7 @@
         <li class="missed" data-hits="0" data-linenumber="43">
           
           
-          <code class="ruby">        params.require(:user).permit(:tamu_uin, :class_section, :assignments, :tgrade, :premission, :tbasis, :tinduction, :tproof)</code>
+          <code class="ruby">        params.require(:user).permit(:encrypted_tamu_uin, :class_section, :assignments, :tgrade, :premission, :tbasis, :tinduction, :tproof)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="44">
@@ -8034,7 +8034,7 @@
         <li class="covered" data-hits="9" data-linenumber="11">
           <span class="hits">9</span>
           
-          <code class="ruby">        user_params = {:tamu_uin=&gt;:class_section}</code>
+          <code class="ruby">        user_params = {:encrypted_tamu_uin=&gt;:class_section}</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
@@ -8142,13 +8142,13 @@
         <li class="never" data-hits="" data-linenumber="29">
           
           
-          <code class="ruby">            #@user.update({:tamu_uin=&gt;:class_section})</code>
+          <code class="ruby">            #@user.update({:encrypted_tamu_uin=&gt;:class_section})</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="30">
           
           
-          <code class="ruby">            #expect(@user.tamu_uin).not_to be_nil</code>
+          <code class="ruby">            #expect(@user.encrypted_tamu_uin).not_to be_nil</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="31">

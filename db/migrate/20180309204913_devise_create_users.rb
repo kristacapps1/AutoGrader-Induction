@@ -7,6 +7,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
       t.string :premission, null: false, default: ""
+      
       t.text :tbasis, null: false, default: ""
       t.text :tinduction, null: false, default: ""
       t.text :tproof, null: false, default: ""
@@ -36,7 +37,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :first_name, null: false, default: ""
       t.string :last_name, null: false, default: ""
       t.string :uid, null: false, default: ""
-      t.string :tamu_uin, null: false, default: ""
+      t.string :encrypted_tamu_uin, null: false, default: ""
       t.string :class_section, null: false, default: ""
       t.string :tgrade, null: false, default: ""
       t.string :grade, null: false, default: ""

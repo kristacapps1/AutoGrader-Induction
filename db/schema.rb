@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 20180325190531) do
     t.string   "first_name",             default: "",         null: false
     t.string   "last_name",              default: "",         null: false
     t.string   "uid",                    default: "",         null: false
-    t.string   "tamu_uin",               default: "",         null: false
+    t.string   "encrypted_tamu_uin",     default: "",         null: false
     t.string   "class_section",          default: "",         null: false
     t.string   "tgrade",                 default: "",         null: false
     t.string   "grade",                  default: "",         null: false

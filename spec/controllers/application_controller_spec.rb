@@ -19,7 +19,7 @@ RSpec.describe ApplicationController, type: :controller do
     describe "require_uin_class" do
         it "checks that without uin go to edit user path" do
             @appctrl1  = ApplicationController.new()
-            @user.update({:tamu_uin=>:class_section})
+            @user.update({:encrypted_tamu_uin=>:class_section})
             #@appctrl.require_uin_class
             expect(request.fullpath).to eq(edit_user_path)
         end
