@@ -69,9 +69,10 @@
               </h2></center>
             
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+              
                 <div class="jumbotron" style="width:48%">
                    
-                    <p class="lead">This is where the student's solution will go</p>
+                    <p class="lead">Student Solution</p>
                    <%= form_for(@user, :url => { :action => "update_ans" } ) do |f| %>
 
                     <%= f.label "Basis" %> <br>
@@ -91,8 +92,29 @@
                 
                 <div class="jumbotron" style="width:48%">
                      <center><h3 class="h2">Solution/Grade</h3></center>
-                    <p class="lead">This is where the actual solution will go</p>
+                    
                     <hr class="my-4">
+                    <h6>Basis:</h6>
+                    <% if @assignment %>
+                    <h3><%= @assignment.basis %></h3>
+                    <% end %>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    
+                    <h6>Proof:</h6>
+                    <% if @assignment %>
+                    <h3><%= @assignment.solution %></h3>
+                    <% end %>
                    
                 </div>
             </div>

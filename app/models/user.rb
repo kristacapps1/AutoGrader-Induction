@@ -25,9 +25,9 @@ class User < ActiveRecord::Base
     end
      
     
-     $tassignment = 0
+     $tassignment = 1
      $cuser = 0
-
+     $grades = [0,0,0,0,0]
     class << self
         attr_accessor :assignments
     end

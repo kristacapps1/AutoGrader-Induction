@@ -6,6 +6,7 @@ class CreateAssignments < ActiveRecord::Migration
       t.string :due_date
       t.integer :possible_grade
       t.text :solution
+      t.string :basis
       t.timestamps null: false
     end
   end

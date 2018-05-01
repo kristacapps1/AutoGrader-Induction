@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20180325190531) do
     t.string   "due_date"
     t.integer  "possible_grade"
     t.text     "solution"
+    t.string   "basis"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end
@@ -33,23 +34,23 @@ ActiveRecord::Schema.define(version: 20180325190531) do
     t.text     "a1basis",                default: "",         null: false
     t.text     "a1induction",            default: "",         null: false
     t.text     "a1proof",                default: "",         null: false
-    t.string   "a1grade",                default: "",         null: false
+    t.string   "a1grade",                default: "-1",       null: false
     t.text     "a2basis",                default: "",         null: false
     t.text     "a2induction",            default: "",         null: false
     t.text     "a2proof",                default: "",         null: false
-    t.string   "a2grade",                default: "",         null: false
+    t.string   "a2grade",                default: "-1",       null: false
     t.text     "a3basis",                default: "",         null: false
     t.text     "a3induction",            default: "",         null: false
     t.text     "a3proof",                default: "",         null: false
-    t.string   "a3grade",                default: "",         null: false
+    t.string   "a3grade",                default: "-1",       null: false
     t.text     "a4basis",                default: "",         null: false
     t.text     "a4induction",            default: "",         null: false
     t.text     "a4proof",                default: "",         null: false
-    t.string   "a4grade",                default: "",         null: false
+    t.string   "a4grade",                default: "-1",       null: false
     t.text     "a5basis",                default: "",         null: false
     t.text     "a5duction",              default: "",         null: false
     t.text     "a5proof",                default: "",         null: false
-    t.string   "a5grade",                default: "",         null: false
+    t.string   "a5grade",                default: "-1",       null: false
     t.string   "provider",               default: "",         null: false
     t.string   "first_name",             default: "",         null: false
     t.string   "last_name",              default: "",         null: false
@@ -57,7 +58,7 @@ ActiveRecord::Schema.define(version: 20180325190531) do
     t.string   "tamu_uin",               default: "",         null: false
     t.string   "class_section",          default: "",         null: false
     t.string   "tgrade",                 default: "",         null: false
-    t.string   "grade",                  default: "",         null: false
+    t.string   "grade",                  default: "-1",       null: false
     t.text     "assignments",            default: "--- []\n", null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"

@@ -77,15 +77,108 @@
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
                 <div class="jumbotron" style="width:48%">
                     <center><h3 class="h2">Student's Solution</h3></center>
-                    <p class="lead">This is where the student's solution will go</p>
                     <hr class="my-4">
+                    <h6>Basis:</h6>
+                    <h3> <% if $tassignment == "1" %>
+            <%= @users.a1basis %>
+            <% elsif $tassignment == "2" %>
+            <%= @users.a2basis %>
+            <% elsif $tassignment == "3" %>
+            <%= @users.a3basis %>
+            <% elsif $tassignment == "4" %>
+            <%= @users.a4basis %>
+            <% elsif $tassignment == "5" %>
+            <%= @users.a5basis %>
+            <% end %>
+            <br>
+            <br>
+            <br>
+            
+            
+            <h6>Induction Hypothesis:</h6>
+            <h3> <% if $tassignment == "1" %>
+            <%= @users.a1induction %>
+            <% elsif $tassignment == "2" %>
+            <%= @users.a2induction %>
+            <% elsif $tassignment == "3" %>
+            <%= @users.a3induction %>
+            <% elsif $tassignment == "4" %>
+            <%= @users.a4induction %>
+            <% elsif $tassignment == "5" %>
+            <%= @users.a5duction %>
+            
+            
+            
+            <% end %></h3>
+            
+            <br>
+            <br>
+            <br> 
+            
+            <h6>Proof:</h6>
+            <h3> <% if $tassignment == "1" %>
+            <%= @users.a1proof %>
+            <% elsif $tassignment == "2" %>
+            <%= @users.a2proof %>
+            <% elsif $tassignment == "3" %>
+            <%= @users.a3proof %>
+            <% elsif $tassignment == "4" %>
+            <%= @users.a4proof %>
+            <% elsif $tassignment == "5" %>
+            <%= @users.a5proof %>
+            
+             
+            
+            
+            <% end %></h3>
+            
+                    
                     
                 </div>
                 
                 <div class="jumbotron" style="width:48%">
                      <center><h3 class="h2">Solution</h3></center>
-                    <p class="lead">This is where the actual solution will go</p>
+                    
                     <hr class="my-4">
+                                        <h6>Basis:</h6>
+                    <h3><% if $tassignment == "1" %>
+            <%= Assignment.find("1").basis %>
+            <% elsif $tassignment == "2" %>
+            <%= Assignment.find("2").basis %>
+            <% elsif $tassignment == "3" %>
+            <%= Assignment.find("3").basis %>
+            <% elsif $tassignment == "4" %>
+            <%= Assignment.find("4").basis %>
+            <% elsif $tassignment == "5" %>
+            <%= Assignment.find("5").basis %>
+            
+            
+            <% end %></h3>
+                    <br>
+                    <br>
+                    
+                   
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h6>Proof</h6>
+                   <h3> <% if $tassignment == "1" %>
+            <%= Assignment.find("1").solution %>
+            <% elsif $tassignment == "2" %>
+            <%= Assignment.find("2").solution %>
+            <% elsif $tassignment == "3" %>
+            <%= Assignment.find("3").solution %>
+            <% elsif $tassignment == "4" %>
+            <%= Assignment.find("4").solution %>
+            <% elsif $tassignment == "5" %>
+            <%= Assignment.find("5").solution %>
+            
+            
+            <% end %></h3>
                    
                 </div>
             </div>

@@ -19,6 +19,9 @@ class UsersController < ApplicationController
     end
     
     def update_assignments
+        
+        
+        
         @users = User.all
         @users.each  do |user|
             @assignment_array = user.assignments 
