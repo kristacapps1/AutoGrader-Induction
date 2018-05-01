@@ -57,15 +57,15 @@
           </div>
           
             <center><h2 class="h2">Grade:  
-            <% if $tassignment == "1" && @users.a1grade.to_i > 0 %>
+            <% if $tassignment == "1" && @users.a1grade.to_i >= 0 %>
             <%= @users.a1grade %>
-            <% elsif $tassignment == "2" && @users.a2grade.to_i > 0 %>
+            <% elsif $tassignment == "2" && @users.a2grade.to_i >= 0 %>
             <%= @users.a2grade %>
-            <% elsif $tassignment == "3" && @users.a3grade.to_i > 0 %>
+            <% elsif $tassignment == "3" && @users.a3grade.to_i >= 0 %>
             <%= @users.a3grade %>
-            <% elsif $tassignment == "4" && @users.a4grade.to_i > 0 %>
+            <% elsif $tassignment == "4" && @users.a4grade.to_i >= 0 %>
             <%= @users.a4grade %>
-            <% elsif $tassignment == "5" && @users.a5grade.to_i > 0 %>
+            <% elsif $tassignment == "5" && @users.a5grade.to_i >= 0 %>
             <%= @users.a5grade %>
             <% else %>
             <%= "No Student Submission" %>
