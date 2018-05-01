@@ -224,7 +224,9 @@ class AssignmentsController < ApplicationController
   
   def user_params
         # NOTE: Using `strong_parameters` gem
-        params.require(:user).permit(:tamu_uin, :class_section, :assignments, :tbasis, :tinduction, :tproof, :a1basis, :a1nduction, :a1proof, :a2basis, :a2nduction, :a2proof, :a3basis, :a3nduction, :a3proof, :a4basis, :a4nduction, :a4proof, :a5basis, :a5nduction, :a5proof, :a1grade, :a2grade, :a3grade, :a4grade, :a5grade)
+
+        params.require(:user).permit(:encrypted_tamu_uin, :class_section, :assignments, :tbasis, :tinduction, :tproof, :a1basis, :a1nduction, :a1proof, :a2basis, :a2nduction, :a2proof, :a3basis, :a3nduction, :a3proof, :a4basis, :a4nduction, :a4proof, :a5basis, :a5nduction, :a5proof, :a1grade, :a2grade, :a3grade, :a4grade, :a5grade)
+
   end
   
 end

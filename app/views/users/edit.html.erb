@@ -6,8 +6,8 @@
     <h2>Please update your information</h2>
     <%= form_for(@user, :url => { :action => "update_user",  params: {id: @user.id} } ) do |f| %>
       <div class="field">
-        <%= f.label :tamu_uin, "UIN" %><br />
-        <%= f.text_field :tamu_uin, :autocomplete => "tamu_uin", presence: true, :required => true, class: "form-control"  %>
+        <%= f.label :encrypted_tamu_uin, "UIN" %><br />
+        <%= f.text_field :encrypted_tamu_uin, :autocomplete => "encrypted_tamu_uin", presence: true, :required => true, class: "form-control"  %>
       </div>
       <br>
       <div class="field" >

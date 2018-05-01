@@ -91,7 +91,7 @@
                     <td><%= link_to user.first_name , page_path(user) %> </td>
                     <td><%= user.last_name %></td>
                     <td><%= user.email %></td>
-                    <td><%= user.tamu_uin %></td>
+                    <td><%= user.encrypted_tamu_uin %></td>
                     <td><%= user.class_section %></td>
                   </tr>
                   <% end %>
