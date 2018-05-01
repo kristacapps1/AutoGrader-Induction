@@ -25,8 +25,9 @@
             <ul class="nav flex-column">
               <li class="nav-item">
                 <a class="nav-link active" href="#">
-                  <span data-feather="home"></span>
-                  Back To Dashboard <span class="sr-only">(current)</span>
+                  
+                  <%= link_to "Back to Dashboard", grader_dashboard_path, class: "nav-link active" %>
+                   <span class="sr-only">(current)
                 </a>
               </li>
             </ul>
@@ -41,8 +42,8 @@
               <% @assignments.each do |assignment| %>
               <li class="nav-item">
                 <a class="nav-link" href="#">
-                  <span data-feather="file-text">
-                  <%= link_to assignment.title, assignments_count_path(:id => assignment.id) %>
+                 
+                  <%= link_to assignment.title, assignments_count_path(:id => assignment.id), class: "nav-link active" %>
                 </a>
               </li>
                 <% end %>
