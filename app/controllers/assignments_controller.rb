@@ -86,16 +86,21 @@ class AssignmentsController < ApplicationController
        user.save
        t = user.tproof
        b = user.tbasis
+       if t.length >= assignment.solution.to_s.length
        compstring = (t.to_s).slice(t.index(assignment.solution.to_s)..assignment.solution.length + t.index(assignment.solution.to_s)-1)
+    
        
        user.save
         if compstring == assignment.solution
           grade = grade + 50
         end
-        
+       end
+        if b.length >= assignment.basis.to_s.length
         compstring2 = (b.to_s).slice(b.index(assignment.basis.to_s)..assignment.basis.length + b.index(assignment.basis.to_s)-1)
+        
         if compstring2 == assignment.basis
           grade = grade + 50
+        end
         end
         
       if $tassign == "1"
