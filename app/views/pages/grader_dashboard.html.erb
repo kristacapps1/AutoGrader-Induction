@@ -126,7 +126,7 @@
         data: {
           labels: ["A", "B", "C", "D", "F"],
           datasets: [{
-            data: <%= @grades %>,
+            data: <%= @grades || [0,0,0,0,0]%>,
             lineTension: 0,
             backgroundColor: 'transparent',
             borderColor: '#007bff',

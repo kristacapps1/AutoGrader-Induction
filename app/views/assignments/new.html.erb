@@ -4,6 +4,7 @@
   </head>
 
 <center><div style=" width:25%">
+  
 <h2>Please fill out the information below</h2>
 <br>
 <%= form_for @assignment do |f| %>
@@ -16,9 +17,6 @@
     <br>
     <%= f.label "Due Date" %> <br>
     <%= f.date_field :due_date, class: "form-control" %> <br>
-    <br>
-    <%= f.label "Highest Possible Grade" %> <br>
-    <%= f.text_field :possible_grade, class: "form-control" %> <br>
     <br>
     <%= f.submit class: "btn btn-default" %>
 

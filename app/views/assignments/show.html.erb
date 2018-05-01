@@ -94,12 +94,32 @@
                      <center><h3 class="h2">Solution/Grade</h3></center>
                     
                     <hr class="my-4">
-                    <h6>Basis:</h6>
-                    <% if @assignment %>
-                    <h3><%= @assignment.basis %></h3>
+                    
+                     <% if @assignment %>
+                    <% if @date > @assignment.due_date %>
+                    <h3>Grade: 
+                  
+                   
+                    <% if $tassign == "1" %>
+                    <%= @user.a1grade %>
+                    <% elsif $tassign == "2" %>
+                    <%= @user.a2grade %>
+                    <% elsif $tassign == "3" %>
+                    <%= @user.a3grade %>
+                    <% elsif $tassign == "4" %>
+                    <%= @user.a4grade %>
+                    <% elsif $tassign == "5" %>
+                    <%= @user.a5grade %>
+                     
+                    
+                    </h3>
                     <% end %>
                     <br>
-                    <br>
+                    
+                    <h6>Basis:</h6>
+                    <h3><%= @assignment.basis %></h3>
+                    
+                    
                     <br>
                     <br>
                     <br>
@@ -114,6 +134,26 @@
                     <h6>Proof:</h6>
                     <% if @assignment %>
                     <h3><%= @assignment.solution %></h3>
+                    <% end %>
+                    
+                    <% else %>
+                    <h3>Due: <%= @assignment.due_date %></h3>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <% end %>
                     <% end %>
                    
                 </div>

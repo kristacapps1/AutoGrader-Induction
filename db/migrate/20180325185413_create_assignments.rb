@@ -3,7 +3,7 @@ class CreateAssignments < ActiveRecord::Migration
     create_table :assignments do |t|
       t.string :title
       t.text :problem
-      t.string :due_date
+      t.datetime :due_date
       t.integer :possible_grade
       t.text :solution
       t.string :basis

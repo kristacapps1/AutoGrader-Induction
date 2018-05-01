@@ -1,6 +1,10 @@
 class AssignmentsController < ApplicationController
  #push comment
   def new
+       if Assignment.count == 5
+         flash[:notice] = "Max Assignments Already Created"
+        redirect_to grader_dashboard_path
+       end
     @assignment = Assignment.new
   end
   
@@ -16,10 +20,7 @@ class AssignmentsController < ApplicationController
   end
   
   def create
-    if Assignment.count == 5
-         flash[:notice] = "Max Assignments Already Created"
-        redirect_to grader_dashboard_path
-    end
+   
     @assignment = Assignment.new(assignment_params)
     @assignment.save
     
@@ -84,13 +85,19 @@ class AssignmentsController < ApplicationController
        grade = 0
        user.save
        t = user.tproof
+       b = user.tbasis
        compstring = (t.to_s).slice(t.index(assignment.solution.to_s)..assignment.solution.length + t.index(assignment.solution.to_s)-1)
        
        user.save
         if compstring == assignment.solution
           grade = grade + 50
         end
-        grade = grade + 50
+        
+        compstring2 = (b.to_s).slice(b.index(assignment.basis.to_s)..assignment.basis.length + b.index(assignment.basis.to_s)-1)
+        if compstring2 == assignment.basis
+          grade = grade + 50
+        end
+        
       if $tassign == "1"
          user.a1basis = user.tbasis
          user.a1induction = user.tinduction
@@ -189,8 +196,10 @@ class AssignmentsController < ApplicationController
     
   
   def show 
+      require 'date'
+      @date = DateTime.now
      @assignments = Assignment.all
-     @user = User.first
+     @user = current_user
      id = params[:id]
     if id == "0"
       id = "1"
