@@ -117,21 +117,21 @@
                     <br>
                     
                     <h6>Basis:</h6>
-                    <h3><%= @assignment.basis %></h3>
+                    <h5><%= @assignment.basis %></h5>
                     
                     
                     <br>
-                    <br>
+                    
                     <h6>Induction Hypothesis:</h6>
                     <% if @assignment %>
-                    <h3><%= @assignment.induction %></h3>
+                    <h5><%= @assignment.induction %></h5>
                     <% end %>
                     <br>
-                    <br>
+                    
                     
                     <h6>Proof:</h6>
                     <% if @assignment %>
-                    <h3><%= @assignment.solution %></h3>
+                    <h5><%= @assignment.solution %></h5>
                     <% end %>
                     
                     <% else %>

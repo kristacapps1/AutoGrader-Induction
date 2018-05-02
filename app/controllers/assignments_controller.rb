@@ -161,12 +161,10 @@ class AssignmentsController < ApplicationController
        b = user.tbasis
        
        compstring = t
-    compstring2 = b
+       compstring2 = b
        
        user.save
-        if assignment.basis.include? compstring2
-          grade = grade + 50
-        end
+        
        
         
         
@@ -174,6 +172,11 @@ class AssignmentsController < ApplicationController
         if assignment.solution.include? "true" and compstring.include? "true"
           grade = grade + 50
         elsif assignment.solution.include? "false" and compstring.include? "false"
+          grade = grade + 50
+        end
+        
+        if assignment.basis.include? compstring2
+          grade = grade + 50
         end
         
         ot = "0"
