@@ -102,33 +102,41 @@ class AssignmentsController < ApplicationController
           grade = grade + 50
         end
         end
-        
+        ot = "0"
+        if DateTime.now > assignment.due_date
+            ot = "1"
+        end
       if $tassign == "1"
          user.a1basis = user.tbasis
          user.a1induction = user.tinduction
          user.a1proof = user.tproof
          user.a1grade = grade
+         user.a1ot = ot
+         
       elsif $tassign == "2"
          user.a2basis = user.tbasis
          user.a2induction = user.tinduction
          user.a2proof = user.tproof
         user.a2grade = grade
+        user.a2ot = ot
       elsif $tassign == "3"
          user.a3basis = user.tbasis
          user.a3induction = user.tinduction
          user.a3proof = user.tproof
         user.a3grade = grade
+        user.a3ot = ot
       elsif $tassign == "4"
          user.a4basis = user.tbasis
          user.a4induction = user.tinduction
          user.a4proof = user.tproof
          user.a4grade = grade
+         user.a4ot = ot
       elsif $tassign == "5"
          user.a5basis = user.tbasis
          user.a5induction = user.tinduction
          user.a5proof = user.tproof  
          user.a5grade = grade
-      
+         user.a5ot = ot
       end  
       
       #add comparison code here
@@ -239,7 +247,7 @@ class AssignmentsController < ApplicationController
   def user_params
         # NOTE: Using `strong_parameters` gem
 
-        params.require(:user).permit(:encrypted_tamu_uin, :class_section, :assignments, :tbasis, :tinduction, :tproof, :a1basis, :a1nduction, :a1proof, :a2basis, :a2nduction, :a2proof, :a3basis, :a3nduction, :a3proof, :a4basis, :a4nduction, :a4proof, :a5basis, :a5nduction, :a5proof, :a1grade, :a2grade, :a3grade, :a4grade, :a5grade)
+        params.require(:user).permit(:encrypted_tamu_uin, :class_section, :assignments, :tbasis, :tinduction, :tproof, :a1basis, :a1nduction, :a1proof, :a2basis, :a2nduction, :a2proof, :a3basis, :a3nduction, :a3proof, :a4basis, :a4nduction, :a4proof, :a5basis, :a5nduction, :a5proof, :a1grade, :a2grade, :a3grade, :a4grade, :a5grade, :a1ot, :a2ot, :a3ot, :a4ot, :a5ot)
 
   end
   

@@ -35,22 +35,27 @@ ActiveRecord::Schema.define(version: 20180325190531) do
     t.text     "a1induction",            default: "",         null: false
     t.text     "a1proof",                default: "",         null: false
     t.string   "a1grade",                default: "-1",       null: false
+    t.string   "a1ot",                   default: "0",        null: false
     t.text     "a2basis",                default: "",         null: false
     t.text     "a2induction",            default: "",         null: false
     t.text     "a2proof",                default: "",         null: false
     t.string   "a2grade",                default: "-1",       null: false
+    t.string   "a2ot",                   default: "0",        null: false
     t.text     "a3basis",                default: "",         null: false
     t.text     "a3induction",            default: "",         null: false
     t.text     "a3proof",                default: "",         null: false
     t.string   "a3grade",                default: "-1",       null: false
+    t.string   "a3ot",                   default: "0",        null: false
     t.text     "a4basis",                default: "",         null: false
     t.text     "a4induction",            default: "",         null: false
     t.text     "a4proof",                default: "",         null: false
     t.string   "a4grade",                default: "-1",       null: false
+    t.string   "a4ot",                   default: "0",        null: false
     t.text     "a5basis",                default: "",         null: false
     t.text     "a5duction",              default: "",         null: false
     t.text     "a5proof",                default: "",         null: false
     t.string   "a5grade",                default: "-1",       null: false
+    t.string   "a5ot",                   default: "0",        null: false
     t.string   "provider",               default: "",         null: false
     t.string   "first_name",             default: "",         null: false
     t.string   "last_name",              default: "",         null: false

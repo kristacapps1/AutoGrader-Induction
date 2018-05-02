@@ -60,14 +60,29 @@
             <center><h2 class="h2">Grade:  
             <% if $tassignment == "1" && @users.a1grade.to_i >= 0 %>
             <%= @users.a1grade %>
+            <% if @users.a1ot == "1" %>
+            <%= "- Late" %>
+            <% end %>
             <% elsif $tassignment == "2" && @users.a2grade.to_i >= 0 %>
             <%= @users.a2grade %>
+            <% if @users.a2ot == "1" %>
+            <%= "- Late" %>
+            <% end %>
             <% elsif $tassignment == "3" && @users.a3grade.to_i >= 0 %>
             <%= @users.a3grade %>
+            <% if @users.a3ot == "1" %>
+            <%= "- Late" %>
+            <% end %>
             <% elsif $tassignment == "4" && @users.a4grade.to_i >= 0 %>
             <%= @users.a4grade %>
+            <% if @users.a4ot == "1" %>
+            <%= "- Late" %>
+            <% end %>
             <% elsif $tassignment == "5" && @users.a5grade.to_i >= 0 %>
             <%= @users.a5grade %>
+            <% if @users.a5ot == "1" %>
+            <%= "- Late" %>
+            <% end %>
             <% else %>
             <%= "No Student Submission" %>
             
