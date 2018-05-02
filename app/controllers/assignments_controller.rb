@@ -177,6 +177,8 @@ class AssignmentsController < ApplicationController
         
         if assignment.basis.include? compstring2
           grade = grade + 50
+        elsif assignment.basis == compstring2
+            grade = grade + 50
         end
         
         ot = "0"
