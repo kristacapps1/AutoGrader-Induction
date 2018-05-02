@@ -37,26 +37,94 @@ class AssignmentsController < ApplicationController
     end
         
     require "http"
+    eq = "%3d"
+    pl = "%2B"
+    rp = "%28"
+    lp = "%29"
+    dv = "%2F"
+    tproblem = @assignment.problem
+    equation = @assignment.problem.to_s
+   for i in 0..(equation.length-1) do
+        if equation[i] == "="
+           equation[i] = eq
+        end
+        if equation[i] == "+"
+            equation[i] = pl
+        end
+        if equation[i] == "("
+            equation[i] = rp
+        end
+        if equation[i] == ")"
+            equation[i] = lp
+        end
+        if equation[i] == "/"
+            equation[i] = dv
+        end
+        if equation[i] == " "
+            equation[i] = "+"
+        end
+   end
+    
+    url = "http://api.wolframalpha.com/v2/query?appid=U72E65-ARQERXR86Y&input=" + equation + "&podstate=Result__Step-by-step+solution&format=plaintext"
+    #$string = url
     $string = HTTP.get(url).to_s
-    string2 = HTTP.get(url).to_s
+    stringbasis = HTTP.get(url).to_s
+#    string2 = HTTP.get(url).to_s
     
-    string2 = string2.slice!(0..(string2.index('Result')))
+#    string2 = string2.slice!(0..(string2.index('Result')))
     
-    string2 = string2.slice!((string2.index("\""))..string2.length)
-    string2[string2.length-1] = ''
-    string2[string2.length-1] = ''
-    string2[string2.length-1] = ''
-    string2[string2.length-1] = ''
-    string2[0] = ''
-    string2.force_encoding(Encoding::UTF_8)
-    $string = $string.slice!(($string.index('Result'))..$string.length)
-    $string = $string.slice!(($string.index("\""))..$string.length)
-    $string[0] = ''
-    $string[$string.length-1] = ''
-    $string[$string.length-1] = ''
-   @assignment.solution = $string
-   @assignment.basis = string2
-  @assignment.save
+#    string2 = string2.slice!((string2.index("\""))..string2.length)
+#    string2[string2.length-1] = ''
+#    string2[string2.length-1] = ''
+#    string2[string2.length-1] = ''
+#    string2[string2.length-1] = ''
+#    string2[0] = ''
+#    string2.force_encoding(Encoding::UTF_8)
+   $string = $string.slice!(($string.index('prove |'))..$string.index("| method"))
+   stringbasis = stringbasis.slice!((stringbasis.index('Possible intermediate steps'))..stringbasis.index("infos count="))
+   
+   
+   
+   for i in 0..43 do
+       stringbasis[0] = ''
+   end
+   for i in 0..17 do
+       stringbasis[stringbasis.length-1] = ''
+   end
+   while stringbasis.index("&gt;") do
+   stringbasis[stringbasis.index("&gt;")] = ">"
+   aa = stringbasis.index("gt;")
+   ab = aa + 1
+   ac = aa
+   stringbasis[aa]=''
+   stringbasis[ab]=''
+   stringbasis[ac]=''
+   
+   end
+   stringproof = stringbasis
+   stringinduction = stringbasis
+   
+   
+  # stringinduction = stringinduction.slice!(stringinduction.index(""))
+   stringproof = stringproof.slice!(stringproof.index("Answer:")..stringproof.length-1)
+   stringbasis = stringbasis.slice!(stringbasis.index("The base case value is n")..stringbasis.index("For each integer n"))
+   
+   stringbasis[stringbasis.length-1] = ''
+   stringbasis[stringbasis.length-1] = ''
+   
+   
+   @assignment.basis = stringbasis
+   
+   
+   
+#    $string = $string.slice!(($string.index("\""))..$string.length)
+#    $string[0] = ''
+#    $string[$string.length-1] = ''
+#    $string[$string.length-1] = ''
+   @assignment.solution = stringproof
+#   @assignment.basis = string2
+#  @assignment.save
+@assignment.problem = $string
     if @assignment.save
       redirect_to update_assignments_path
     else 
@@ -86,22 +154,22 @@ class AssignmentsController < ApplicationController
        user.save
        t = user.tproof
        b = user.tbasis
-       if t.length >= assignment.solution.to_s.length
-       compstring = (t.to_s).slice(t.index(assignment.solution.to_s)..assignment.solution.length + t.index(assignment.solution.to_s)-1)
+       
+       compstring = t
     
        
        user.save
-        if compstring == assignment.solution
+        if assignment.solution.include? compstring
           grade = grade + 50
         end
-       end
-        if b.length >= assignment.basis.to_s.length
-        compstring2 = (b.to_s).slice(b.index(assignment.basis.to_s)..assignment.basis.length + b.index(assignment.basis.to_s)-1)
+       
         
-        if compstring2 == assignment.basis
+        compstring2 = b
+        
+        if assignment.basis.include? compstring2
           grade = grade + 50
         end
-        end
+        
         ot = "0"
         if DateTime.now > assignment.due_date
             ot = "1"

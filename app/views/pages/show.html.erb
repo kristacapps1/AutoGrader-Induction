@@ -158,8 +158,8 @@
                      <center><h3 class="h2">Solution</h3></center>
                     
                     <hr class="my-4">
-                                        <h6>Basis:</h6>
-                    <h3><% if $tassignment == "1" %>
+                     <h6>Basis</h6>
+                  <h3> <% if $tassignment == "1" %>
             <%= Assignment.find("1").basis %>
             <% elsif $tassignment == "2" %>
             <%= Assignment.find("2").basis %>
@@ -169,20 +169,10 @@
             <%= Assignment.find("4").basis %>
             <% elsif $tassignment == "5" %>
             <%= Assignment.find("5").basis %>
-            
-            
-            <% end %></h3>
-                    <br>
-                    <br>
-                    
-                   
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
+            <%end%>
+                 
+                 
+                 
                     <h6>Proof</h6>
                    <h3> <% if $tassignment == "1" %>
             <%= Assignment.find("1").solution %>
