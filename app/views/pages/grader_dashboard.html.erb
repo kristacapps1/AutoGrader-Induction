@@ -30,12 +30,7 @@
                   Dashboard <span class="sr-only">(current)</span>
                 </a>
               </li>
-                <li class="nav-item">
-                 <a class="nav-link active" href="#">
-                 
-                  Create a New Class <span class="sr-only">(current)</span>
-                </a>
-              </li>
+                
                  <li class="nav-item">
                  <a class="nav-link active" href="#">
                  
@@ -44,23 +39,8 @@
               </li>
             </ul>
 
-            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-              <span>Sections</span>
-              <a class="d-flex align-items-center text-muted" href="#">
-                <span data-feather="plus-circle"></span>
-              </a>
-            </h6>
-            <ul class="nav flex-column mb-2">
-               <% @sections.each do |section| %>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <span data-feather="file-text"></span>
-                  
-                  <%= section %>
-                </a>
-              </li>
-             <% end %>
-            </ul>
+           
+           
           </div>
         </nav>
 
@@ -91,7 +71,7 @@
                     <td><%= link_to user.first_name , page_path(user) %> </td>
                     <td><%= user.last_name %></td>
                     <td><%= user.email %></td>
-                    <td><%= user.tamu_uin %></td>
+                    <td><%= user.encrypted_tamu_uin %></td>
                     <td><%= user.class_section %></td>
                   </tr>
                   <% end %>
@@ -100,9 +80,10 @@
             </table>
           </div>
         </main>
+      
       </div>
     </div>
-
+  
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -126,7 +107,7 @@
         data: {
           labels: ["A", "B", "C", "D", "F"],
           datasets: [{
-            data: [0, 0, 1, 0, 0],
+            data: <%= @grades || [0,0,0,0,0]%>,
             lineTension: 0,
             backgroundColor: 'transparent',
             borderColor: '#007bff',

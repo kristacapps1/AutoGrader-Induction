@@ -1,16 +1,26 @@
-const WolframAlphaAPI = require('wolfram-alpha-api');
-const waApi = WolframAlphaAPI('AH4R6V-3QUP7RQ6UU');
+var http = require('http');
+var url = require('url');
 
-function work(){
-  waApi.getFull('sin(x)').then((queryresult) => {
+http.createServer(function (req, res) {
+    res.writeHead(200, {'Content-Type': 'text/html'});
+
+
+  const WolframAlphaAPI = require('wolfram-alpha-api');
+  const waApi = WolframAlphaAPI('AH4R6V-3QUP7RQ6UU');
+
+
+  waApi.getFull('Sin(x)').then((queryresult) => {
     const pods = queryresult.pods;
-   const output = pods.map((pod) => {
-     const subpodContent = pod.subpods.map(subpod =>
-       `  <img src="${subpod.img.src}" alt="${subpod.img.alt}">`
-     ).join('\n');
-     return `<h2>${pod.title}</h2>\n${subpodContent}`;
-   }).join('\n');
-    document.getElementById("demo").innerHTML = output;
-   console.log(output);
+    const output = pods.map((pod) => {
+      const subpodContent = pod.subpods.map(subpod =>
+        `  <img src="${subpod.img.src}" alt="${subpod.img.alt}">`
+      ).join('\n');
+      return `<h2>${pod.title}</h2>\n${subpodContent}`;
+    }).join('\n');
+    res.end(output);
   }).catch(console.error);
-}
+  
+  
+
+
+}).listen(8080);

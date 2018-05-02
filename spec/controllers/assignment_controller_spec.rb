@@ -22,6 +22,9 @@ RSpec.describe AssignmentsController, type: :controller do
                 @assgctrl.count
                 expect(@assgctrl.assignment).to eql.(Assignment.find(params[:id]))
             end
+            it "checks global var" do
+                expect($tassignment).to eql("1")
+            end
         end
     end
     
@@ -54,7 +57,30 @@ RSpec.describe AssignmentsController, type: :controller do
             end
         end
     end
-    
+
+    describe "check_update_answ" do
+        context "given i have a user" do
+            it "updates attributes and checks them" do
+                @assgctrl.update_ans
+                expect(@assgctrl.user).not_to eql(Assignment.new)
+            end
+            it "makes sure we redirect after update" do
+                expect(current_path).to eq compare_path
+            end
+        end
+    end
+
+    describe "check_compare" do
+        context "given i have a user" do
+            it "compares assignments" do
+                @assgctrl.compare
+                expect(@assgctrl.user).not_to eql(User.new)
+            end
+            it "makes sure we redirect after update" do
+                expect(current_path).to eq assignment_path($tassign)
+            end
+        end
+    end
     
     describe "check_creation" do
         context "given i have other assignments" do

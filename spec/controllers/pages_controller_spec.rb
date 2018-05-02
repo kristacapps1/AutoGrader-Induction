@@ -22,6 +22,11 @@ RSpec.describe PagesController, type: :controller do
             @pgCtrl.show
             expect(@assignments).not_to be_empty
         end
+        it "checks show finds users" do
+            @pgCtrl.show
+            expect(@pgCtrl.users).not_to eql($cuser)
+        end
+
     end
     
     describe "check edit" do
@@ -61,6 +66,14 @@ RSpec.describe PagesController, type: :controller do
             it "checks reqiring some params" do
                 user_params
                 expect(params).not_to be_empty
+            end
+        end
+    end
+    describe "check grader_dash" do
+        context "given i am a grader" do
+            it "checks checks i can see grader dash" do
+                @pgCtrl.grader_dashboard
+                expect(@pgCtrl.sections).to eql(Assignment.sections)
             end
         end
     end

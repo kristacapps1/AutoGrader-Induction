@@ -25,8 +25,9 @@
             <ul class="nav flex-column">
               <li class="nav-item">
                 <a class="nav-link active" href="#">
-                  <span data-feather="home"></span>
-                  Back To Dashboard <span class="sr-only">(current)</span>
+                  
+                  <%= link_to "Back to Dashboard", grader_dashboard_path, class: "nav-link active" %>
+                   <span class="sr-only">(current)
                 </a>
               </li>
             </ul>
@@ -41,8 +42,8 @@
               <% @assignments.each do |assignment| %>
               <li class="nav-item">
                 <a class="nav-link" href="#">
-                  <span data-feather="file-text">
-                  <%= link_to assignment.title, assignments_count_path(:id => assignment.id) %>
+                 
+                  <%= link_to assignment.title, assignments_count_path(:id => assignment.id), class: "nav-link active" %>
                 </a>
               </li>
                 <% end %>
@@ -55,23 +56,152 @@
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
             <h1 class="h2"> Student: <%= @users.first_name + " " + @users.last_name%> </h1>
           </div>
-          <% if @users.assignments[@n] %>
-            <center><h2 class="h2">Grade:  <%= @users.assignments[@n]["grade"] %> </h2></center>
+          
+            <center><h2 class="h2">Grade:  
+            <% if $tassignment == "1" && @users.a1grade.to_i >= 0 %>
+            <%= @users.a1grade %>
+            <% if @users.a1ot == "1" %>
+            <%= "- Late" %>
             <% end %>
+            <% elsif $tassignment == "2" && @users.a2grade.to_i >= 0 %>
+            <%= @users.a2grade %>
+            <% if @users.a2ot == "1" %>
+            <%= "- Late" %>
+            <% end %>
+            <% elsif $tassignment == "3" && @users.a3grade.to_i >= 0 %>
+            <%= @users.a3grade %>
+            <% if @users.a3ot == "1" %>
+            <%= "- Late" %>
+            <% end %>
+            <% elsif $tassignment == "4" && @users.a4grade.to_i >= 0 %>
+            <%= @users.a4grade %>
+            <% if @users.a4ot == "1" %>
+            <%= "- Late" %>
+            <% end %>
+            <% elsif $tassignment == "5" && @users.a5grade.to_i >= 0 %>
+            <%= @users.a5grade %>
+            <% if @users.a5ot == "1" %>
+            <%= "- Late" %>
+            <% end %>
+            <% else %>
+            <%= "No Student Submission" %>
+            
+            <% end %>
+            
+            </h2></center>
+            
             <center> <p> <%= link_to "edit" , edit_page_path(@users) %></p></center>
             
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
                 <div class="jumbotron" style="width:48%">
                     <center><h3 class="h2">Student's Solution</h3></center>
-                    <p class="lead">This is where the student's solution will go</p>
                     <hr class="my-4">
+                    <h6>Basis:</h6>
+                    <h3> <% if $tassignment == "1" %>
+            <%= @users.a1basis %>
+            <% elsif $tassignment == "2" %>
+            <%= @users.a2basis %>
+            <% elsif $tassignment == "3" %>
+            <%= @users.a3basis %>
+            <% elsif $tassignment == "4" %>
+            <%= @users.a4basis %>
+            <% elsif $tassignment == "5" %>
+            <%= @users.a5basis %>
+            <% end %>
+            <br>
+            <br>
+            <br>
+            
+            
+            <h6>Induction Hypothesis:</h6>
+            <h3> <% if $tassignment == "1" %>
+            <%= @users.a1induction %>
+            <% elsif $tassignment == "2" %>
+            <%= @users.a2induction %>
+            <% elsif $tassignment == "3" %>
+            <%= @users.a3induction %>
+            <% elsif $tassignment == "4" %>
+            <%= @users.a4induction %>
+            <% elsif $tassignment == "5" %>
+            <%= @users.a5duction %>
+            
+            
+            
+            <% end %></h3>
+            
+            <br>
+            <br>
+            <br> 
+            
+            <h6>Proof:</h6>
+            <h3> <% if $tassignment == "1" %>
+            <%= @users.a1proof %>
+            <% elsif $tassignment == "2" %>
+            <%= @users.a2proof %>
+            <% elsif $tassignment == "3" %>
+            <%= @users.a3proof %>
+            <% elsif $tassignment == "4" %>
+            <%= @users.a4proof %>
+            <% elsif $tassignment == "5" %>
+            <%= @users.a5proof %>
+            
+             
+            
+            
+            <% end %></h3>
+            
+                    
                     
                 </div>
                 
                 <div class="jumbotron" style="width:48%">
                      <center><h3 class="h2">Solution</h3></center>
-                    <p class="lead">This is where the actual solution will go</p>
+                    
                     <hr class="my-4">
+                     <h6>Basis:</h6>
+                  <h5> <% if $tassignment == "1" %>
+            <%= Assignment.find("1").basis %>
+            <% elsif $tassignment == "2" %>
+            <%= Assignment.find("2").basis %>
+            <% elsif $tassignment == "3" %>
+            <%= Assignment.find("3").basis %>
+            <% elsif $tassignment == "4" %>
+            <%= Assignment.find("4").basis %>
+            <% elsif $tassignment == "5" %>
+            <%= Assignment.find("5").basis %>
+            <%end%></h5>
+                 
+                 
+                  <h6>Inudction Hypothesis:</h6>
+                  <h5> <% if $tassignment == "1" %>
+            <%= Assignment.find("1").induction %>
+            <% elsif $tassignment == "2" %>
+            <%= Assignment.find("2").induction %>
+            <% elsif $tassignment == "3" %>
+            <%= Assignment.find("3").inductions %>
+            <% elsif $tassignment == "4" %>
+            <%= Assignment.find("4").induction %>
+            <% elsif $tassignment == "5" %>
+            <%= Assignment.find("5").induction %>
+            <%end%></h5>
+                 
+                 
+                 
+                 
+                    <h6>Proof:</h6>
+                   <h5> <% if $tassignment == "1" %>
+            <%= Assignment.find("1").solution %>
+            <% elsif $tassignment == "2" %>
+            <%= Assignment.find("2").solution %>
+            <% elsif $tassignment == "3" %>
+            <%= Assignment.find("3").solution %>
+            <% elsif $tassignment == "4" %>
+            <%= Assignment.find("4").solution %>
+            <% elsif $tassignment == "5" %>
+            <%= Assignment.find("5").solution %>
+            
+            
+            <% end %></h5>
                    
                 </div>
             </div>

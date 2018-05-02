@@ -66,9 +66,11 @@ end
 
 group :development do
   gem 'sqlite3'
+  gem 'http'
 end
 
 group :production do
   gem 'pg', '~> 0.20'
   gem 'rails_12factor'
+  gem 'http'
 end

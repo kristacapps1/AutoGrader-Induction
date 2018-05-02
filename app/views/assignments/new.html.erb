@@ -1,19 +1,22 @@
-<h1>Assignments#new</h1>
+<html>
+  
 
+<center><div style=" width:25%">
+  
+<h2>Please fill out the information below</h2>
+<br>
 <%= form_for @assignment do |f| %>
 
-    <%= f.label :title %> <br>
-    <%= f.text_field :title %> <br>
+    <%= f.label "Assignment Title" %> <br>
+    <%= f.text_field :title, class: "form-control" %> <br>
     <br>
-    <%= f.label :problem %> <br>
-    <%= f.text_area :problem %> <br>
+    <%= f.label "Problem" %> <br>
+    <%= f.text_area :problem, class: "form-control" %> <br>
     <br>
-    <%= f.label :due_date %> <br>
-    <%= f.date_field :due_date %> <br>
+    <%= f.label "Due Date" %> <br>
+    <%= f.date_field :due_date, class: "form-control" %> <br>
     <br>
-    <%= f.label :possible_grade %> <br>
-    <%= f.text_field :possible_grade %> <br>
-    <br>
-    <%= f.submit  %>
+    <%= f.submit class: "btn btn-default" %>
 
 <% end %>
+</div></center>

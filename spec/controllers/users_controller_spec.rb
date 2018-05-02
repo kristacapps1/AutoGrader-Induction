@@ -8,7 +8,7 @@ RSpec.describe UsersController, type: :controller do
         current_user = @other_user
         @assignment = Assignment.new()
         @userctrl = UsersController.new()
-        user_params = {:tamu_uin=>:class_section}
+        user_params = {:encrypted_tamu_uin=>:class_section}
     end
     
     describe "check creation" do
@@ -26,8 +26,8 @@ RSpec.describe UsersController, type: :controller do
     
     describe "update_user" do
         it "updates user attributes" do
-            #@user.update({:tamu_uin=>:class_section})
-            #expect(@user.tamu_uin).not_to be_nil
+            #@user.update({:encrypted_tamu_uin=>:class_section})
+            #expect(@user.encrypted_tamu_uin).not_to be_nil
             @userctrl.update_user
             expect(@user.update(user_params)).not_to be_nil
         end
