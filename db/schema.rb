@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20180325190531) do
     t.integer  "possible_grade"
     t.text     "solution"
     t.string   "basis"
+    t.text     "induction"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end

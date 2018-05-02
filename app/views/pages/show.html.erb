@@ -158,8 +158,8 @@
                      <center><h3 class="h2">Solution</h3></center>
                     
                     <hr class="my-4">
-                     <h6>Basis</h6>
-                  <h3> <% if $tassignment == "1" %>
+                     <h6>Basis:</h6>
+                  <h5> <% if $tassignment == "1" %>
             <%= Assignment.find("1").basis %>
             <% elsif $tassignment == "2" %>
             <%= Assignment.find("2").basis %>
@@ -169,12 +169,27 @@
             <%= Assignment.find("4").basis %>
             <% elsif $tassignment == "5" %>
             <%= Assignment.find("5").basis %>
-            <%end%>
+            <%end%></h5>
+                 
+                 
+                  <h6>Inudction Hypothesis:</h6>
+                  <h5> <% if $tassignment == "1" %>
+            <%= Assignment.find("1").induction %>
+            <% elsif $tassignment == "2" %>
+            <%= Assignment.find("2").induction %>
+            <% elsif $tassignment == "3" %>
+            <%= Assignment.find("3").inductions %>
+            <% elsif $tassignment == "4" %>
+            <%= Assignment.find("4").induction %>
+            <% elsif $tassignment == "5" %>
+            <%= Assignment.find("5").induction %>
+            <%end%></h5>
                  
                  
                  
-                    <h6>Proof</h6>
-                   <h3> <% if $tassignment == "1" %>
+                 
+                    <h6>Proof:</h6>
+                   <h5> <% if $tassignment == "1" %>
             <%= Assignment.find("1").solution %>
             <% elsif $tassignment == "2" %>
             <%= Assignment.find("2").solution %>
@@ -186,7 +201,7 @@
             <%= Assignment.find("5").solution %>
             
             
-            <% end %></h3>
+            <% end %></h5>
                    
                 </div>
             </div>

@@ -42,6 +42,7 @@ class AssignmentsController < ApplicationController
     rp = "%28"
     lp = "%29"
     dv = "%2F"
+    ex = "%21"
     tproblem = @assignment.problem
     equation = @assignment.problem.to_s
    for i in 0..(equation.length-1) do
@@ -62,6 +63,9 @@ class AssignmentsController < ApplicationController
         end
         if equation[i] == " "
             equation[i] = "+"
+        end
+        if equation[i] == "!"
+            equation[i] = ex
         end
    end
     
@@ -105,16 +109,17 @@ class AssignmentsController < ApplicationController
    stringinduction = stringbasis
    
    
-  # stringinduction = stringinduction.slice!(stringinduction.index(""))
+   
    stringproof = stringproof.slice!(stringproof.index("Answer:")..stringproof.length-1)
    stringbasis = stringbasis.slice!(stringbasis.index("The base case value is n")..stringbasis.index("For each integer n"))
-   
+   stringinduction = stringinduction.slice!(stringinduction.index("Consider the following properties")..stringinduction.length-1)
    stringbasis[stringbasis.length-1] = ''
    stringbasis[stringbasis.length-1] = ''
+   stringinduction[stringinduction.length-1] = ''
    
    
    @assignment.basis = stringbasis
-   
+   @assignment.induction = stringinduction
    
    
 #    $string = $string.slice!(($string.index("\""))..$string.length)
@@ -156,18 +161,19 @@ class AssignmentsController < ApplicationController
        b = user.tbasis
        
        compstring = t
-    
+    compstring2 = b
        
        user.save
-        if assignment.solution.include? compstring
+        if assignment.basis.include? compstring2
           grade = grade + 50
         end
        
         
-        compstring2 = b
         
-        if assignment.basis.include? compstring2
+        
+        if assignment.solution.include? "true" and compstring.include? "true"
           grade = grade + 50
+        elsif assignment.solution.include? "false" and compstring.include? "false"
         end
         
         ot = "0"
@@ -309,7 +315,7 @@ class AssignmentsController < ApplicationController
   private
   
   def assignment_params
-    params.require(:assignment).permit(:title, :problem, :due_date, :possible_grade, :solution, :basis)
+    params.require(:assignment).permit(:title, :problem, :due_date, :possible_grade, :solution, :basis, :induction)
   end
   
   def user_params

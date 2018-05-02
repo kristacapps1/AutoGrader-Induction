@@ -7,6 +7,7 @@ class CreateAssignments < ActiveRecord::Migration
       t.integer :possible_grade
       t.text :solution
       t.string :basis
+      t.text :induction
       t.timestamps null: false
     end
   end
